@@ -75,8 +75,9 @@
     }
 
     .section {
-      background: var(--panel);
-      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: var(--radius);
       padding: 10px;
     }
@@ -112,6 +113,31 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    .toggle-summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 12px;
+      padding: 8px 10px;
+      min-height: 36px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .toggle-summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .toggle-summary::-webkit-details-marker {
+      display: none;
+    }
+
     .link:hover,
     .link:focus-visible {
       transform: translateY(-1px);
@@ -120,10 +146,77 @@
       outline: none;
     }
 
+    .toggle-summary:hover,
+    .toggle-summary:focus-visible {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+      outline: none;
+    }
+
     .arrow {
       color: var(--muted);
       font-size: 0.9rem;
       flex: 0 0 auto;
+    }
+
+    .toggle-icon {
+      color: var(--muted);
+      font-size: 0.8rem;
+      flex: 0 0 auto;
+      transition: transform 120ms ease;
+      opacity: 0.9;
+    }
+
+    details[open] .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    details[open] .toggle-summary {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.16);
+      margin-bottom: 8px;
+    }
+
+    .toggle-content {
+      margin-top: 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .toggle-text {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .sub-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .sub-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 11px;
+      min-height: 40px;
+      font-size: 0.86rem;
+    }
+
+    .sub-link:hover,
+    .sub-link:focus-visible {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.16);
+      outline: none;
     }
 
     .footer {
@@ -141,6 +234,9 @@
       .section { padding: 8px; }
       .links { gap: 6px; }
       .link { padding: 10px 11px; min-height: 42px; }
+      .toggle-summary { padding: 8px 10px; min-height: 36px; }
+      .toggle-content { padding: 8px; }
+      .sub-link { padding: 9px 10px; }
     }
   </style>
 </head>
@@ -165,6 +261,22 @@
           <a class="link" href="https://example.com/" target="_blank" rel="noopener noreferrer">
             <span>Homepage</span><span class="arrow">↗</span>
           </a>
+          <details>
+            <summary class="toggle-summary">
+              <span>More about my music</span><span class="toggle-icon">⌄</span>
+            </summary>
+            <div class="toggle-content">
+              <p class="toggle-text">Add a short intro here, such as your sound, latest release, or where new listeners should start.</p>
+              <div class="sub-links">
+                <a class="sub-link" href="https://example.com/latest" target="_blank" rel="noopener noreferrer">
+                  <span>Latest Release</span><span class="arrow">↗</span>
+                </a>
+                <a class="sub-link" href="https://example.com/about" target="_blank" rel="noopener noreferrer">
+                  <span>About / Press Kit</span><span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -177,6 +289,22 @@
           <a class="link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">
             <span>Apple Music Playlist</span><span class="arrow">↗</span>
           </a>
+          <details>
+            <summary class="toggle-summary">
+              <span>Playlist details</span><span class="toggle-icon">⌄</span>
+            </summary>
+            <div class="toggle-content">
+              <p class="toggle-text">Use this section for context like mood, update frequency, or what listeners can expect.</p>
+              <div class="sub-links">
+                <a class="sub-link" href="https://example.com/playlist-notes" target="_blank" rel="noopener noreferrer">
+                  <span>Curator Notes</span><span class="arrow">↗</span>
+                </a>
+                <a class="sub-link" href="https://example.com/all-playlists" target="_blank" rel="noopener noreferrer">
+                  <span>All Playlists</span><span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -189,6 +317,22 @@
           <a class="link" href="https://example.com/guidelines" target="_blank" rel="noopener noreferrer">
             <span>Submission Guidelines</span><span class="arrow">↗</span>
           </a>
+          <details>
+            <summary class="toggle-summary">
+              <span>Before you submit</span><span class="toggle-icon">⌄</span>
+            </summary>
+            <div class="toggle-content">
+              <p class="toggle-text">You can place submission rules here, for example genre fit, preferred mood, or response time.</p>
+              <div class="sub-links">
+                <a class="sub-link" href="https://example.com/faq" target="_blank" rel="noopener noreferrer">
+                  <span>FAQ</span><span class="arrow">↗</span>
+                </a>
+                <a class="sub-link" href="https://example.com/contact" target="_blank" rel="noopener noreferrer">
+                  <span>Contact</span><span class="arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
     </div>
