@@ -4,693 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>denada. | Acoustic Lofi Folkhop</title>
-  <style>
-    :root {
-      --bg: #f6f1e8;
-      --bg-soft: #efe7da;
-      --card: rgba(255, 252, 247, 0.86);
-      --card-strong: rgba(255, 252, 247, 0.96);
-      --text: #2f2a25;
-      --muted: #6f675f;
-      --line: rgba(47, 42, 37, 0.12);
-      --accent: #8b6b4b;
-      --accent-dark: #6f5338;
-      --shadow: 0 10px 30px rgba(47, 42, 37, 0.08);
-      --radius: 20px;
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(139, 107, 75, 0.08), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(111, 83, 56, 0.08), transparent 30%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    button,
-    summary {
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .container {
-      width: min(calc(100% - 2rem), var(--max-width));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      background: rgba(246, 241, 232, 0.82);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .brand {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: lowercase;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      padding: 0.7rem 1rem;
-      border-radius: 999px;
-      color: var(--muted);
-      transition: 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      background: var(--bg-soft);
-      color: var(--text);
-    }
-
-    section {
-      padding: 5rem 0;
-      scroll-margin-top: 90px;
-    }
-
-    .hero {
-      padding-top: 4.5rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-dark);
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      line-height: 0.95;
-      margin-bottom: 1.25rem;
-      letter-spacing: -0.04em;
-    }
-
-    .lead {
-      font-size: 1.1rem;
-      max-width: 60ch;
-      color: var(--muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-top: 1.5rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0.85rem 1.15rem;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--text);
-      transition: 0.2s ease;
-      font-weight: 600;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-dark);
-      border-color: var(--accent-dark);
-    }
-
-    .hero-card,
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-    }
-
-    .hero-card {
-      padding: 1rem;
-      border-radius: calc(var(--radius) + 6px);
-    }
-
-    .hero-card img {
-      height: 520px;
-      border-radius: 16px;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height: 1.05;
-      margin-bottom: 0.9rem;
-      letter-spacing: -0.03em;
-    }
-
-    .section-text {
-      color: var(--muted);
-      max-width: 70ch;
-      margin-bottom: 2rem;
-    }
-
-    .card {
-      padding: 1.4rem;
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .music-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .music-item {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      align-items: stretch;
-      background: var(--card);
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .music-copy {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .music-copy h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.65rem;
-    }
-
-    .music-copy p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .media-panel {
-      min-height: 320px;
-      background: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 1.5rem 1.5rem 0.5rem;
-    }
-
-    .media-panel img {
-      height: 100%;
-      width: 100%;
-      border-radius: 14px;
-    }
-
-    .media-panel iframe {
-      width: 100%;
-      max-width: 100%;
-      display: block;
-    }
-
-    .spotify-panel {
-      padding-left: 0;
-    }
-
-    .spotify-shell {
-      width: 100%;
-      padding: 0.5rem;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.32);
-      border: 1px solid rgba(47, 42, 37, 0.08);
-    }
-
-    .platform-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 0.75rem;
-    }
-
-    .platform-link {
-      padding: 0.8rem 1rem;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.55);
-      font-weight: 600;
-      transition: 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .platform-link:hover {
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    details.platform-dropdown {
-      position: relative;
-    }
-
-    details.platform-dropdown summary {
-      list-style: none;
-    }
-
-    details.platform-dropdown summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .dropdown-menu {
-      display: grid;
-      gap: 0.65rem;
-      margin-top: 0.7rem;
-      padding: 0.8rem;
-      min-width: 220px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--card-strong);
-      box-shadow: var(--shadow);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .gallery-card {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .gallery-trigger {
-      display: block;
-      width: 100%;
-      text-align: left;
-      border: none;
-      background: none;
-    }
-
-    .gallery-thumb-wrap {
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: var(--bg-soft);
-    }
-
-    .gallery-thumb {
-      width: 100%;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-trigger:hover .gallery-thumb {
-      transform: scale(1.03);
-    }
-
-    .gallery-meta {
-      padding: 1rem 1.1rem 1.2rem;
-    }
-
-    .gallery-meta h3 {
-      font-size: 1rem;
-      margin-bottom: 0.45rem;
-    }
-
-    .gallery-meta p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .playlist-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-    }
-
-    .playlist-card {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      height: 100%;
-    }
-
-    .playlist-media {
-      background: var(--bg-soft);
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-    }
-
-    .playlist-media img {
-      height: 100%;
-      width: 100%;
-    }
-
-    .contact-grid,
-    .footer-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .contact-grid {
-      grid-template-columns: 1fr 1fr;
-      align-items: start;
-    }
-
-    form {
-      display: grid;
-      gap: 1rem;
-    }
-
-    label {
-      display: grid;
-      gap: 0.45rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.95rem 1rem;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.75);
-      color: var(--text);
-      font: inherit;
-    }
-
-    textarea {
-      min-height: 180px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: 2px solid rgba(139, 107, 75, 0.2);
-      border-color: var(--accent);
-    }
-
-    .contact-note {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-top: 0.4rem;
-    }
-
-    footer {
-      padding: 2.5rem 0 3rem;
-      border-top: 1px solid var(--line);
-      margin-top: 1rem;
-    }
-
-    .footer-grid {
-      grid-template-columns: 1fr auto auto;
-      align-items: center;
-    }
-
-    .footer-copy,
-    .footer-link {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer-link:hover {
-      color: var(--text);
-    }
-
-    .gallery-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(25, 21, 18, 0.78);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1.25rem;
-      z-index: 2500;
-    }
-
-    .gallery-modal.active {
-      display: flex;
-    }
-
-    .gallery-modal-panel {
-      width: min(980px, 100%);
-      max-height: 92vh;
-      overflow: auto;
-      background: var(--card-strong);
-      border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-      padding: 1rem;
-      position: relative;
-    }
-
-    .gallery-modal-topbar {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 0.75rem;
-    }
-
-    .gallery-close,
-    .gallery-arrow {
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: var(--shadow);
-    }
-
-    .gallery-close {
-      padding: 0.75rem 1rem;
-    }
-
-    .gallery-modal-content {
-      display: grid;
-      grid-template-columns: auto minmax(0, 1fr) auto;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .gallery-arrow {
-      width: 52px;
-      height: 52px;
-      font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .gallery-arrow:hover,
-    .gallery-close:hover {
-      transform: translateY(-1px);
-    }
-
-    .gallery-modal-center {
-      min-width: 0;
-    }
-
-    .gallery-modal-image-wrap {
-      background: var(--bg-soft);
-      border-radius: 18px;
-      overflow: hidden;
-    }
-
-    .gallery-modal-image {
-      width: 100%;
-      max-height: 68vh;
-      object-fit: contain;
-      background: var(--bg-soft);
-    }
-
-    .gallery-modal-text {
-      padding: 1rem 0.35rem 0.2rem;
-    }
-
-    .gallery-modal-text h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .gallery-modal-text p {
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    @media (max-width: 1100px) {
-      .playlist-cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid,
-      .contact-grid,
-      .footer-grid,
-      .gallery-grid,
-      .music-item {
-        grid-template-columns: 1fr;
-      }
-
-      .playlist-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card img {
-        height: 380px;
-      }
-
-      .media-panel {
-        min-height: 260px;
-        padding: 0 1.5rem 1.5rem 1.5rem;
-      }
-
-      .spotify-panel {
-        padding-top: 0;
-      }
-
-      .nav {
-        padding: 0.9rem 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .nav-links {
-        width: 100%;
-      }
-
-      .gallery-modal-content {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-arrow-row {
-        display: flex;
-        justify-content: center;
-        gap: 0.8rem;
-        margin-top: 0.75rem;
-      }
-
-      .gallery-arrow.desktop-only {
-        display: none;
-      }
-
-      .gallery-arrow.mobile-only {
-        display: inline-flex;
-      }
-    }
-
-    @media (min-width: 921px) {
-      .gallery-arrow.mobile-only {
-        display: none;
-      }
-    }
-
-    @media (max-width: 560px) {
-      section {
-        padding: 4rem 0;
-      }
-
-      .hero {
-        padding-top: 3rem;
-      }
-
-      .hero-card img {
-        height: 240px;
-      }
-
-      .btn,
-      .platform-link {
-        width: 100%;
-      }
-
-      .button-row,
-      .platform-group {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      details.platform-dropdown {
-        width: 100%;
-      }
-
-      .dropdown-menu {
-        min-width: unset;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
@@ -702,7 +16,7 @@
         <a href="#gallery">Gallery</a>
         <a href="#playlists">Playlists</a>
         <a href="#contact">Contact</a>
-        <a href="#impressum">Impressum</a>
+        <a href="impressum.html">Impressum</a>
       </nav>
     </div>
   </header>
@@ -772,18 +86,18 @@
             </div>
 
             <div class="media-panel spotify-panel">
-                <iframe
-                  data-testid="embed-iframe"
-                  style="border-radius:12px"
-                  src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
-                  width="100%"
-                  height="352"
-                  frameborder="0"
-                  allowfullscreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  title="Spotify playlist embed"
-                ></iframe>
+              <iframe
+                data-testid="embed-iframe"
+                style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
+                width="100%"
+                height="352"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="Spotify playlist embed"
+              ></iframe>
             </div>
           </article>
 
@@ -922,7 +236,6 @@
                 alt="Musician playing acoustic guitar"
               />
             </div>
-
             <div>
               <h3>Organic sound</h3>
               <p>
@@ -930,12 +243,10 @@
                 at the center of the sound. The goal is to keep everything open,
                 natural, and human rather than overly polished or synthetic.
               </p>
-
               <div class="platform-group">
                 <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
                 <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
                 <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-
                 <details class="platform-dropdown">
                   <summary class="platform-link">Other platforms</summary>
                   <div class="dropdown-menu">
@@ -955,7 +266,6 @@
                 alt="Piano in warm sunlight"
               />
             </div>
-
             <div>
               <h3>Calm but rhythmic</h3>
               <p>
@@ -963,12 +273,10 @@
                 carry the track forward. That balance makes the music work for
                 focus, reading, creative work, or simply slowing down.
               </p>
-
               <div class="platform-group">
                 <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
                 <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
                 <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-
                 <details class="platform-dropdown">
                   <summary class="platform-link">Other platforms</summary>
                   <div class="dropdown-menu">
@@ -988,7 +296,6 @@
                 alt="Cozy studio headphones and notebook"
               />
             </div>
-
             <div>
               <h3>Bright and cozy</h3>
               <p>
@@ -996,12 +303,10 @@
                 summer light, and quiet moments shape the overall atmosphere.
                 The music is meant to feel uplifting, soft, and easy to return to.
               </p>
-
               <div class="platform-group">
                 <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
                 <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
                 <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-
                 <details class="platform-dropdown">
                   <summary class="platform-link">Other platforms</summary>
                   <div class="dropdown-menu">
@@ -1043,17 +348,14 @@
                 Name
                 <input type="text" name="name" placeholder="Your name" required />
               </label>
-
               <label>
                 Email
                 <input type="email" name="email" placeholder="your@email.com" required />
               </label>
-
               <label>
                 Message
                 <textarea name="message" placeholder="Write your message here..." required></textarea>
               </label>
-
               <button class="btn btn-primary" type="submit">Send email</button>
             </form>
           </div>
@@ -1062,10 +364,11 @@
     </section>
   </main>
 
-  <footer id="impressum">
+  <footer>
     <div class="container footer-grid">
       <div class="footer-copy">© XXX 2026</div>
-      <a class="footer-link" href="#">Impressum</a>
+      <a class="footer-link" href="impressum.html">Impressum</a>
+      <a class="footer-link" href="privacy.html">Privacy</a>
       <div class="footer-copy">All rights reserved.</div>
     </div>
   </footer>
