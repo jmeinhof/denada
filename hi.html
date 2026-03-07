@@ -3,35 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Producer Link in Bio</title>
-  <meta name="description" content="Minimal link in bio for a music producer" />
+  <title>denada. | Links</title>
+  <meta name="description" content="Link in bio for denada." />
   <style>
     :root {
-      --bg: #0d0d0f;
-      --panel: #151519;
-      --panel-2: #1b1b20;
-      --text: #f4f4f5;
-      --muted: #a1a1aa;
-      --border: rgba(255, 255, 255, 0.08);
-      --max-width: 420px;
-      --radius: 18px;
+      --bg: #f6f1e8;
+      --bg-soft: #efe7da;
+      --card: rgba(255, 252, 247, 0.94);
+      --card-2: rgba(255, 252, 247, 0.98);
+      --text: #2f2a25;
+      --muted: #6f675f;
+      --line: rgba(47, 42, 37, 0.12);
+      --accent: #8b6b4b;
+      --accent-dark: #6f5338;
+      --shadow: 0 10px 30px rgba(47, 42, 37, 0.08);
+      --radius: 20px;
+      --radius-sm: 14px;
+      --max-width: 440px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       min-height: 100%;
     }
 
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(139, 107, 75, 0.08), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(111, 83, 56, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
       display: flex;
       justify-content: center;
-      padding: 16px;
+      padding: 18px 14px 28px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .wrap {
@@ -41,53 +62,56 @@
 
     .hero {
       text-align: center;
-      padding: 10px 8px 14px;
+      padding: 10px 8px 18px;
     }
 
     .avatar {
-      width: 60px;
-      height: 60px;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 12px;
       border-radius: 50%;
-      margin: 0 auto 10px;
-      background: linear-gradient(145deg, #202028, #121218);
-      border: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7), transparent 45%),
+        linear-gradient(145deg, #d9c2a5, #b89068);
+      border: 1px solid rgba(47, 42, 37, 0.1);
+      box-shadow: 0 8px 20px rgba(47, 42, 37, 0.08);
     }
 
     h1 {
-      font-size: 1.05rem;
-      line-height: 1.2;
       margin: 0;
-      font-weight: 650;
-      letter-spacing: -0.02em;
+      font-size: 1.2rem;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 700;
     }
 
     .tagline {
-      margin: 6px auto 0;
-      font-size: 0.86rem;
-      line-height: 1.35;
+      margin: 8px auto 0;
+      max-width: 32ch;
       color: var(--muted);
-      max-width: 28ch;
+      font-size: 0.92rem;
+      line-height: 1.45;
     }
 
     .sections {
       display: grid;
-      gap: 10px;
+      gap: 12px;
     }
 
     .section {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.15);
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.55);
       border-radius: var(--radius);
-      padding: 10px;
+      box-shadow: var(--shadow);
+      padding: 12px;
     }
 
     .section-title {
-      margin: 0 0 8px;
-      font-size: 0.68rem;
+      margin: 0 0 10px;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
+      letter-spacing: 0.14em;
+      color: var(--accent-dark);
       font-weight: 700;
     }
 
@@ -96,93 +120,123 @@
       gap: 8px;
     }
 
-    .link {
+    .link,
+    .sub-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      text-decoration: none;
+      gap: 12px;
+      min-height: 48px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: var(--card-2);
       color: var(--text);
-      background: var(--panel-2);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 11px 12px;
-      min-height: 44px;
-      font-size: 0.92rem;
-      transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
       -webkit-tap-highlight-color: transparent;
     }
 
+    .sub-link {
+      min-height: 42px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .link:hover,
+    .link:focus-visible,
+    .sub-link:hover,
+    .sub-link:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+      border-color: rgba(47, 42, 37, 0.18);
+      outline: none;
+    }
+
+    .link:active,
+    .sub-link:active {
+      transform: translateY(0);
+    }
+
+    .link-main {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .link-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .link-note {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .arrow {
+      flex: 0 0 auto;
+      color: var(--accent-dark);
+      font-size: 0.95rem;
+    }
+
+    details {
+      border-radius: var(--radius-sm);
+    }
+
     .toggle-summary {
-      cursor: pointer;
       list-style: none;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 12px;
-      padding: 8px 10px;
-      min-height: 36px;
-      font-size: 0.82rem;
+      min-height: 42px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.4);
       color: var(--muted);
-    }
-
-    .toggle-summary {
+      font-size: 0.86rem;
+      font-weight: 600;
       cursor: pointer;
-      list-style: none;
+      transition: background 120ms ease, border-color 120ms ease;
     }
 
     .toggle-summary::-webkit-details-marker {
       display: none;
     }
 
-    .link:hover,
-    .link:focus-visible {
-      transform: translateY(-1px);
-      border-color: rgba(255, 255, 255, 0.16);
-      background: #202028;
-      outline: none;
-    }
-
     .toggle-summary:hover,
     .toggle-summary:focus-visible {
-      border-color: rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.65);
+      border-color: rgba(47, 42, 37, 0.18);
       outline: none;
-    }
-
-    .arrow {
-      color: var(--muted);
-      font-size: 0.9rem;
-      flex: 0 0 auto;
     }
 
     .toggle-icon {
-      color: var(--muted);
-      font-size: 0.8rem;
       flex: 0 0 auto;
+      color: var(--accent-dark);
+      font-size: 0.82rem;
       transition: transform 120ms ease;
-      opacity: 0.9;
     }
 
     details[open] .toggle-icon {
       transform: rotate(180deg);
     }
 
-    details[open] .toggle-summary {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 255, 255, 0.16);
-      margin-bottom: 8px;
-    }
-
     .toggle-content {
-      margin-top: 0;
+      margin-top: 8px;
       padding: 10px;
-      background: rgba(0, 0, 0, 0.12);
-      border: 1px solid var(--border);
-      border-radius: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.45);
     }
 
     .toggle-text {
@@ -197,46 +251,45 @@
       gap: 8px;
     }
 
-    .sub-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 10px 11px;
-      min-height: 40px;
-      font-size: 0.86rem;
-    }
-
-    .sub-link:hover,
-    .sub-link:focus-visible {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.16);
-      outline: none;
-    }
-
     .footer {
       text-align: center;
       color: var(--muted);
-      font-size: 0.75rem;
-      padding: 12px 4px 2px;
+      font-size: 0.76rem;
+      padding: 14px 4px 0;
     }
 
-    @media (max-height: 760px) {
-      body { padding: 10px 12px; }
-      .hero { padding-bottom: 10px; }
-      .avatar { width: 52px; height: 52px; margin-bottom: 8px; }
-      .sections { gap: 8px; }
-      .section { padding: 8px; }
-      .links { gap: 6px; }
-      .link { padding: 10px 11px; min-height: 42px; }
-      .toggle-summary { padding: 8px 10px; min-height: 36px; }
-      .toggle-content { padding: 8px; }
-      .sub-link { padding: 9px 10px; }
+    @media (max-width: 420px) {
+      body {
+        padding: 14px 10px 22px;
+      }
+
+      .hero {
+        padding-bottom: 16px;
+      }
+
+      .avatar {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 1.1rem;
+      }
+
+      .tagline {
+        font-size: 0.88rem;
+      }
+
+      .section {
+        padding: 10px;
+      }
+
+      .link,
+      .sub-link {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
     }
   </style>
 </head>
@@ -244,7 +297,7 @@
   <main class="wrap">
     <header class="hero">
       <div class="avatar" aria-hidden="true"></div>
-      <h1>Producer Name</h1>
+      <h1>denada.</h1>
       <p class="tagline">Warm, organic instrumentals for calm and sunny days.</p>
     </header>
 
@@ -253,26 +306,46 @@
         <h2 class="section-title" id="music-title">My Music</h2>
         <div class="links">
           <a class="link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">
-            <span>Spotify</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Spotify</span>
+              <span class="link-note">Listen to my releases</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <a class="link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">
-            <span>Apple Music</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Apple Music</span>
+              <span class="link-note">Stream on Apple Music</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <a class="link" href="https://example.com/" target="_blank" rel="noopener noreferrer">
-            <span>Homepage</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Homepage</span>
+              <span class="link-note">Visit my website</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <details>
             <summary class="toggle-summary">
-              <span>More about my music</span><span class="toggle-icon">⌄</span>
+              <span>More about my music</span>
+              <span class="toggle-icon">⌄</span>
             </summary>
             <div class="toggle-content">
-              <p class="toggle-text">Add a short intro here, such as your sound, latest release, or where new listeners should start.</p>
+              <p class="toggle-text">
+                Add a short intro here, such as your sound, latest release, or where new listeners should start.
+              </p>
               <div class="sub-links">
                 <a class="sub-link" href="https://example.com/latest" target="_blank" rel="noopener noreferrer">
-                  <span>Latest Release</span><span class="arrow">↗</span>
+                  <span>Latest Release</span>
+                  <span class="arrow">↗</span>
                 </a>
                 <a class="sub-link" href="https://example.com/about" target="_blank" rel="noopener noreferrer">
-                  <span>About / Press Kit</span><span class="arrow">↗</span>
+                  <span>About / Press Kit</span>
+                  <span class="arrow">↗</span>
                 </a>
               </div>
             </div>
@@ -284,23 +357,38 @@
         <h2 class="section-title" id="playlists-title">My Playlists</h2>
         <div class="links">
           <a class="link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">
-            <span>Spotify Playlist</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Spotify Playlist</span>
+              <span class="link-note">Curated warm and organic sounds</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <a class="link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">
-            <span>Apple Music Playlist</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Apple Music Playlist</span>
+              <span class="link-note">Listen on Apple Music</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <details>
             <summary class="toggle-summary">
-              <span>Playlist details</span><span class="toggle-icon">⌄</span>
+              <span>Playlist details</span>
+              <span class="toggle-icon">⌄</span>
             </summary>
             <div class="toggle-content">
-              <p class="toggle-text">Use this section for context like mood, update frequency, or what listeners can expect.</p>
+              <p class="toggle-text">
+                Use this section for context like mood, update frequency, or what listeners can expect.
+              </p>
               <div class="sub-links">
                 <a class="sub-link" href="https://example.com/playlist-notes" target="_blank" rel="noopener noreferrer">
-                  <span>Curator Notes</span><span class="arrow">↗</span>
+                  <span>Curator Notes</span>
+                  <span class="arrow">↗</span>
                 </a>
                 <a class="sub-link" href="https://example.com/all-playlists" target="_blank" rel="noopener noreferrer">
-                  <span>All Playlists</span><span class="arrow">↗</span>
+                  <span>All Playlists</span>
+                  <span class="arrow">↗</span>
                 </a>
               </div>
             </div>
@@ -312,23 +400,38 @@
         <h2 class="section-title" id="submissions-title">Playlist Submissions</h2>
         <div class="links">
           <a class="link" href="https://example.com/submit" target="_blank" rel="noopener noreferrer">
-            <span>Submit Your Track</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Submit Your Track</span>
+              <span class="link-note">Send music for playlist consideration</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <a class="link" href="https://example.com/guidelines" target="_blank" rel="noopener noreferrer">
-            <span>Submission Guidelines</span><span class="arrow">↗</span>
+            <span class="link-main">
+              <span class="link-label">Submission Guidelines</span>
+              <span class="link-note">Check the fit before sending</span>
+            </span>
+            <span class="arrow">↗</span>
           </a>
+
           <details>
             <summary class="toggle-summary">
-              <span>Before you submit</span><span class="toggle-icon">⌄</span>
+              <span>Before you submit</span>
+              <span class="toggle-icon">⌄</span>
             </summary>
             <div class="toggle-content">
-              <p class="toggle-text">You can place submission rules here, for example genre fit, preferred mood, or response time.</p>
+              <p class="toggle-text">
+                You can place submission rules here, for example genre fit, preferred mood, or response time.
+              </p>
               <div class="sub-links">
                 <a class="sub-link" href="https://example.com/faq" target="_blank" rel="noopener noreferrer">
-                  <span>FAQ</span><span class="arrow">↗</span>
+                  <span>FAQ</span>
+                  <span class="arrow">↗</span>
                 </a>
                 <a class="sub-link" href="https://example.com/contact" target="_blank" rel="noopener noreferrer">
-                  <span>Contact</span><span class="arrow">↗</span>
+                  <span>Contact</span>
+                  <span class="arrow">↗</span>
                 </a>
               </div>
             </div>
@@ -337,7 +440,7 @@
       </section>
     </div>
 
-    <div class="footer">Minimal link in bio</div>
+    <div class="footer">denada. links</div>
   </main>
 </body>
 </html>
