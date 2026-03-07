@@ -66,16 +66,16 @@
     }
 
     .avatar {
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 12px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.7), transparent 45%),
-        linear-gradient(145deg, #d9c2a5, #b89068);
-      border: 1px solid rgba(47, 42, 37, 0.1);
-      box-shadow: 0 8px 20px rgba(47, 42, 37, 0.08);
-    }
+  display: block;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(47, 42, 37, 0.1);
+  box-shadow: 0 8px 20px rgba(47, 42, 37, 0.08);
+  background: #e8dfd3;
+}
 
     h1 {
       margin: 0;
@@ -296,7 +296,7 @@
 <body>
   <main class="wrap">
     <header class="hero">
-      <div class="avatar" aria-hidden="true"></div>
+      <img class="avatar" src="media/This_is_denada_Cover_small.jpg" alt="denada. logo" />
       <h1>denada.</h1>
       <p class="tagline">Warm, organic instrumentals for calm and sunny days.</p>
     </header>
