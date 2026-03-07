@@ -1,238 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>denada. | Acoustic Lofi Folkhop</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>denada. | Acoustic Lofi Folkhop</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand">denada.</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#playlists">Playlists</a>
+        <a href="#contact">Contact</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="site-header">
-<div class="container nav">
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Warm acoustic lofi folkhop</span>
+          <h1>Organic beats, soft textures, and sunlit calm.</h1>
+          <p class="lead">
+            I make warm, acoustic-sounding lofi folkhop with real instruments,
+            mellow grooves, gentle melodies, and a cozy atmosphere made for
+            focus, slow mornings, and quiet evenings.
+          </p>
 
-<a href="#home" class="brand">denada.</a>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#music">Listen now</a>
+            <a class="btn" href="#gallery">View gallery</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
 
-<nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#music">Music</a>
-<a href="#gallery">Gallery</a>
-<a href="#playlists">Playlists</a>
-<a href="#contact">Contact</a>
-</nav>
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80"
+            alt="Acoustic guitar and studio setup"
+          />
+        </div>
+      </div>
+    </section>
 
-</div>
-</header>
+    <section id="music">
+      <div class="container">
+        <h2 class="section-title">Music</h2>
+        <p class="section-text">
+          My sound blends acoustic guitar, piano, bass, subtle drums, and warm
+          textures into instrumental music that feels natural, intimate, and
+          uplifting. The focus is on simplicity, melody, and a handmade sound
+          that stays light, clean, and easy to return to.
+        </p>
 
+        <div class="music-grid">
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Organic sound</h3>
+              <p>
+                Real instruments, soft transients, and warm harmonic detail are
+                at the center of the sound. The goal is to keep everything open,
+                natural, and human rather than overly polished or synthetic.
+              </p>
 
-<main>
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
 
-<section id="home" class="hero">
-<div class="container hero-grid">
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://www.amazon.com/music" target="_blank" rel="noopener noreferrer">Amazon Music</a>
+                  </div>
+                </details>
+              </div>
+            </div>
 
-<div>
-<span class="eyebrow">Warm acoustic lofi folkhop</span>
-<h1>Organic beats, soft textures, and sunlit calm.</h1>
+            <div class="media-panel spotify-panel">
+  <div class="media-panel spotify-panel">
 
-<p class="lead">
-I make warm acoustic instrumental music with guitars, piano,
-bass and gentle grooves designed for focus, calm moments
-and quiet listening.
-</p>
+  <div class="spotify-placeholder" id="spotify-consent-box">
 
-<div class="button-row">
-<a class="btn btn-primary" href="#music">Listen</a>
-<a class="btn" href="#gallery">Gallery</a>
-<a class="btn" href="#contact">Contact</a>
-</div>
+    <div class="spotify-top">
 
-</div>
+      <div class="spotify-cover">
+        <img src="media/This_is_denada_Cover_small.jpg" alt="This is denada playlist cover">
+      </div>
 
-<div class="hero-card">
-<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80">
-</div>
+      <div class="spotify-info">
+        <span class="spotify-label">Spotify</span>
+        <h4>This is denada.</h4>
+        <p>Playlist • denada.</p>
+      </div>
 
-</div>
-</section>
+    </div>
 
+    <div class="spotify-tracks">
+      <div class="spotify-track"></div>
+      <div class="spotify-track"></div>
+      <div class="spotify-track"></div>
+      <div class="spotify-track"></div>
+    </div>
 
-<section id="music">
-<div class="container">
+    <div class="spotify-bottom">
 
-<h2 class="section-title">Music</h2>
+      <p class="spotify-consent">
+        Clicking “Load Spotify player” will load content from Spotify.
+        Spotify may process personal data such as your IP address and may use cookies.
+      </p>
 
-<div class="music-grid">
+      <button class="spotify-load-btn" id="loadSpotifyButton">
+        Load Spotify player
+      </button>
 
-<article class="music-item">
+    </div>
 
-<div class="music-copy">
-
-<h3>Organic sound</h3>
-
-<p>
-Real instruments and warm analog textures form the core of
-the sound.
-</p>
-
-<div class="platform-group">
-
-<a class="platform-link" href="https://open.spotify.com">Spotify</a>
-<a class="platform-link" href="https://music.apple.com">Apple Music</a>
-<a class="platform-link" href="https://music.youtube.com">YouTube Music</a>
-
-</div>
-
-</div>
-
-<div class="media-panel">
-
-<div class="spotify-placeholder" id="spotify-consent-box">
-
-<div class="spotify-top">
-
-<div class="spotify-cover">
-<img src="media/This_is_denada_Cover_small.jpg">
-</div>
-
-<div>
-<span class="spotify-label">Spotify</span>
-<h4>This is denada.</h4>
-<p>Playlist · denada.</p>
-</div>
-
-</div>
-
-<div class="spotify-tracks">
-<div class="spotify-track"></div>
-<div class="spotify-track"></div>
-<div class="spotify-track"></div>
-</div>
-
-<p class="spotify-consent">
-Clicking “Load Spotify player” will connect to Spotify
-and may transmit personal data such as your IP address.
-</p>
-
-<button class="spotify-load-btn" id="loadSpotifyButton">
-Load Spotify player
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-</div>
-</section>
-
-
-<section id="gallery">
-<div class="container">
-
-<h2 class="section-title">Gallery</h2>
-
-<div class="gallery-grid">
-
-<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80">
+  </div>
 
 </div>
-
 </div>
-</section>
+          </article>
 
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Calm but rhythmic</h3>
+              <p>
+                The grooves stay relaxed, but there is always enough movement to
+                carry the track forward. That balance makes the music work for
+                focus, reading, creative work, or simply slowing down.
+              </p>
 
-<section id="playlists">
-<div class="container">
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
 
-<h2 class="section-title">Playlists</h2>
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+                  </div>
+                </details>
+              </div>
+            </div>
 
-<div class="playlist-cards">
+            <div class="media-panel">
+              <img
+                src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80"
+                alt="Piano in warm sunlight"
+              />
+            </div>
+          </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80">
-<h3>Organic Sound</h3>
-</div>
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Bright and cozy</h3>
+              <p>
+                Gentle melodies, natural tones, and a mood inspired by nature,
+                summer light, and quiet moments shape the overall atmosphere.
+                The music is meant to feel uplifting, soft, and easy to return to.
+              </p>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80">
-<h3>Calm Grooves</h3>
-</div>
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80">
-<h3>Bright & Cozy</h3>
-</div>
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://listen.tidal.com/" target="_blank" rel="noopener noreferrer">More</a>
+                  </div>
+                </details>
+              </div>
+            </div>
 
-</div>
+            <div class="media-panel">
+              <img
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
+                alt="Cozy studio headphones and notebook"
+              />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-text">
+          A visual collection of studio moments, instruments, textures, and
+          places that fit the atmosphere behind the music. Each image can be
+          opened in a larger view with a longer description underneath.
+        </p>
 
+        <div class="gallery-grid">
+          <article class="gallery-card card">
+            <button class="gallery-trigger" type="button" data-index="0" aria-label="Open gallery image 1">
+              <div class="gallery-thumb-wrap">
+                <img class="gallery-thumb" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80" alt="Studio desk with instruments" />
+              </div>
+              <div class="gallery-meta">
+                <h3>Studio corner</h3>
+                <p>A compact setup built for warmth, detail, and quiet sessions.</p>
+              </div>
+            </button>
+          </article>
 
-<section id="contact">
-<div class="container">
+          <article class="gallery-card card">
+            <button class="gallery-trigger" type="button" data-index="1" aria-label="Open gallery image 2">
+              <div class="gallery-thumb-wrap">
+                <img class="gallery-thumb" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80" alt="Acoustic guitar close-up" />
+              </div>
+              <div class="gallery-meta">
+                <h3>Acoustic textures</h3>
+                <p>Wood, strings, and small imperfections that shape the sound.</p>
+              </div>
+            </button>
+          </article>
 
-<h2 class="section-title">Contact</h2>
+          <article class="gallery-card card">
+            <button class="gallery-trigger" type="button" data-index="2" aria-label="Open gallery image 3">
+              <div class="gallery-thumb-wrap">
+                <img class="gallery-thumb" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80" alt="Notebook and headphones near a window" />
+              </div>
+              <div class="gallery-meta">
+                <h3>Sketches and ideas</h3>
+                <p>Loose notes, melodies, and moments before a track takes shape.</p>
+              </div>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<form action="mailto:hello@yourdomain.com" method="post" enctype="text/plain">
+    <section id="playlists">
+      <div class="container">
+        <h2 class="section-title">Playlists</h2>
+        <p class="section-text">
+          Alongside my own releases, I curate playlists built around warm,
+          peaceful, and organic instrumental music. They are made for focus,
+          gentle mood-lifting, and easy listening throughout the day.
+        </p>
 
-<input type="text" name="name" placeholder="Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<textarea name="message" placeholder="Message"></textarea>
+        <div class="playlist-cards">
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
+                alt="Musician playing acoustic guitar"
+              />
+            </div>
+            <div>
+              <h3>Organic sound</h3>
+              <p>
+                Real instruments, soft transients, and warm harmonic detail are
+                at the center of the sound. The goal is to keep everything open,
+                natural, and human rather than overly polished or synthetic.
+              </p>
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://www.amazon.com/music" target="_blank" rel="noopener noreferrer">Amazon Music</a>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </article>
 
-<button class="btn btn-primary">Send</button>
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80"
+                alt="Piano in warm sunlight"
+              />
+            </div>
+            <div>
+              <h3>Calm but rhythmic</h3>
+              <p>
+                The grooves stay relaxed, but there is always enough movement to
+                carry the track forward. That balance makes the music work for
+                focus, reading, creative work, or simply slowing down.
+              </p>
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer">SoundCloud</a>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </article>
 
-</form>
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
+                alt="Cozy studio headphones and notebook"
+              />
+            </div>
+            <div>
+              <h3>Bright and cozy</h3>
+              <p>
+                Gentle melodies, natural tones, and a mood inspired by nature,
+                summer light, and quiet moments shape the overall atmosphere.
+                The music is meant to feel uplifting, soft, and easy to return to.
+              </p>
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com/" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                <details class="platform-dropdown">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://www.deezer.com/" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://tidal.com/" target="_blank" rel="noopener noreferrer">TIDAL</a>
+                    <a class="platform-link" href="https://listen.tidal.com/" target="_blank" rel="noopener noreferrer">More</a>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text">
+          For collaborations, playlist inquiries, licensing, or general
+          questions, send a message here.
+        </p>
 
-</main>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Let’s connect</h3>
+            <p>
+              Use the form to open your email app with a prepared message. You
+              can also replace it with your own backend form later if needed.
+            </p>
+            <p class="contact-note">
+              Direct email: <strong>hello@yourdomain.com</strong>
+            </p>
+          </div>
 
+          <div class="card">
+            <form action="mailto:hello@yourdomain.com" method="post" enctype="text/plain">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" placeholder="Write your message here..." required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send email</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-<div class="container footer-grid">
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-copy">© XXX 2026</div>
+      <a class="footer-link" href="impressum.html">Impressum</a>
+      <a class="footer-link" href="privacy.html">Privacy</a>
+      <div class="footer-copy">All rights reserved.</div>
+    </div>
+  </footer>
 
-<div>© XXX 2026</div>
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <div class="gallery-modal-panel">
+      <div class="gallery-modal-topbar">
+        <button class="gallery-close" type="button" id="galleryClose">Close</button>
+      </div>
 
-<a href="impressum.html">Impressum</a>
-<a href="privacy.html">Privacy</a>
+      <div class="gallery-modal-content">
+        <button class="gallery-arrow desktop-only" type="button" id="galleryPrev" aria-label="Previous image">←</button>
 
-</div>
-</footer>
+        <div class="gallery-modal-center">
+          <div class="gallery-modal-image-wrap">
+            <img class="gallery-modal-image" id="galleryModalImage" src="" alt="" />
+          </div>
 
+          <div class="gallery-modal-text">
+            <h3 id="galleryModalTitle"></h3>
+            <div id="galleryModalDescription"></div>
+          </div>
 
-<script>
+          <div class="gallery-arrow-row">
+            <button class="gallery-arrow mobile-only" type="button" id="galleryPrevMobile" aria-label="Previous image">←</button>
+            <button class="gallery-arrow mobile-only" type="button" id="galleryNextMobile" aria-label="Next image">→</button>
+          </div>
+        </div>
+
+        <button class="gallery-arrow desktop-only" type="button" id="galleryNext" aria-label="Next image">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const galleryItems = [
+      {
+        title: "Studio corner",
+        image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80",
+        alt: "Studio desk with instruments",
+        description: [
+          "This is the kind of small, focused space where many ideas begin.",
+          "I like setups that stay simple and tactile, with instruments always close enough to pick up without breaking the mood.",
+          "The atmosphere matters as much as the gear. Warm light, wood, and a quiet room help shape the kind of intimate sound I want the music to have from the very first note.",
+          "Many tracks start here as short sketches before they grow into full arrangements."
+        ]
+      },
+      {
+        title: "Acoustic textures",
+        image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1600&q=80",
+        alt: "Acoustic guitar close-up",
+        description: [
+          "Acoustic instruments bring a softness and detail that is difficult to replace.",
+          "Small noises, finger movement, and natural resonance all add life to an otherwise very minimal arrangement.",
+          "I like sounds that feel slightly imperfect in a good way. That human texture helps the music stay grounded and keeps simple loops from feeling static.",
+          "In this project, guitars are often the emotional center."
+        ]
+      },
+      {
+        title: "Sketches and ideas",
+        image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1600&q=80",
+        alt: "Notebook and headphones near a window",
+        description: [
+          "A lot of songs begin with fragments instead of finished concepts.",
+          "Sometimes it is one chord movement, a short bass figure, or just a few words that describe the feeling I want to capture.",
+          "Writing things down keeps the process light and flexible and gives me room to collect moods, colors, and small images first.",
+          "That early stage is often the most honest part of the process."
+        ]
+      }
+    ];
+
+    const modal = document.getElementById("galleryModal");
+    const modalImage = document.getElementById("galleryModalImage");
+    const modalTitle = document.getElementById("galleryModalTitle");
+    const modalDescription = document.getElementById("galleryModalDescription");
+    const modalClose = document.getElementById("galleryClose");
+    const prevButtons = [document.getElementById("galleryPrev"), document.getElementById("galleryPrevMobile")];
+    const nextButtons = [document.getElementById("galleryNext"), document.getElementById("galleryNextMobile")];
+    const triggers = document.querySelectorAll(".gallery-trigger");
+
+    let currentIndex = 0;
+
+    function renderGalleryItem(index) {
+      const item = galleryItems[index];
+      currentIndex = index;
+      modalImage.src = item.image;
+      modalImage.alt = item.alt;
+      modalTitle.textContent = item.title;
+      modalDescription.innerHTML = item.description.map(text => `<p>${text}</p>`).join("");
+    }
+
+    function openGallery(index) {
+      renderGalleryItem(index);
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeGallery() {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function showNext() {
+      const nextIndex = (currentIndex + 1) % galleryItems.length;
+      renderGalleryItem(nextIndex);
+    }
+
+    function showPrev() {
+      const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      renderGalleryItem(prevIndex);
+    }
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        openGallery(Number(trigger.dataset.index));
+      });
+    });
+
+    prevButtons.forEach(btn => btn && btn.addEventListener("click", showPrev));
+    nextButtons.forEach(btn => btn && btn.addEventListener("click", showNext));
+    modalClose.addEventListener("click", closeGallery);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeGallery();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!modal.classList.contains("active")) return;
+      if (event.key === "Escape") closeGallery();
+      if (event.key === "ArrowRight") showNext();
+      if (event.key === "ArrowLeft") showPrev();
+    });
 
 const spotifyButton = document.getElementById("loadSpotifyButton");
 const spotifyBox = document.getElementById("spotify-consent-box");
 
-if(spotifyButton){
+if (spotifyButton && spotifyBox) {
+  const loadSpotify = () => {
+    spotifyBox.outerHTML = `
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Spotify playlist embed"
+      ></iframe>
+    `;
+  };
 
-spotifyButton.onclick = () => {
+  spotifyButton.addEventListener("click", loadSpotify);
 
-spotifyBox.outerHTML = `
-<iframe
-style="border-radius:12px"
-src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e"
-width="100%"
-height="352"
-frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy">
-</iframe>
-`;
-
-};
-
+  spotifyBox.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      loadSpotify();
+    }
+  });
 }
 
-</script>
+    const spotifyButton = document.getElementById("loadSpotifyButton");
+const spotifyBox = document.getElementById("spotify-consent-box");
 
+if (spotifyButton && spotifyBox) {
+
+  spotifyButton.addEventListener("click", () => {
+
+    spotifyBox.outerHTML = `
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Spotify playlist embed">
+      </iframe>
+    `;
+
+  });
+
+}
+    
+  </script>
 </body>
 </html>
