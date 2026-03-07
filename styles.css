@@ -725,16 +725,60 @@ footer {
   background: rgba(255, 255, 255, 0.12);
 }
 
-.spotify-line-1 { width: 92%; }
-.spotify-line-2 { width: 84%; }
-.spotify-line-3 { width: 88%; }
-.spotify-line-4 { width: 68%; }
+.spotify-line-1 {
+  width: 92%;
+}
+
+.spotify-line-2 {
+  width: 84%;
+}
+
+.spotify-line-3 {
+  width: 88%;
+}
+
+.spotify-line-4 {
+  width: 68%;
+}
 
 .spotify-placeholder-bottom {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.spotify-consent-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+}
+
+.spotify-consent-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.spotify-consent-title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.spotify-consent-text {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 42ch;
 }
 
 .spotify-load-btn {
@@ -745,7 +789,9 @@ footer {
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
   cursor: pointer;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(29, 185, 84, 0.22);
 }
 
 .spotify-load-btn:hover,
@@ -888,23 +934,17 @@ footer {
     font-size: 1rem;
   }
 
+  .spotify-placeholder-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .spotify-consent-text {
+    max-width: none;
+  }
+
   .spotify-load-btn {
     width: 100%;
     justify-content: center;
   }
-  
-  .spotify-consent-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  padding: 0.95rem 1rem;
-}
-}
- 
-.spotify-consent-text {
-  margin: 0;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.72);
-  max-width: 42ch;
 }
