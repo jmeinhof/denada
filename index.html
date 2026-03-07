@@ -522,6 +522,38 @@
       if (event.key === "ArrowRight") showNext();
       if (event.key === "ArrowLeft") showPrev();
     });
+
+const spotifyButton = document.getElementById("loadSpotifyButton");
+const spotifyBox = document.getElementById("spotify-consent-box");
+
+if (spotifyButton && spotifyBox) {
+  const loadSpotify = () => {
+    spotifyBox.outerHTML = `
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Spotify playlist embed"
+      ></iframe>
+    `;
+  };
+
+  spotifyButton.addEventListener("click", loadSpotify);
+
+  spotifyBox.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      loadSpotify();
+    }
+  });
+}
+    
   </script>
 </body>
 </html>
