@@ -940,6 +940,7 @@ footer {
   }
 
   .spotify-consent-text {
+    font-size: 0.68rem;
     max-width: none;
   }
 
