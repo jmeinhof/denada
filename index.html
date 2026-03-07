@@ -86,19 +86,36 @@
             </div>
 
             <div class="media-panel spotify-panel">
-              <iframe
-                data-testid="embed-iframe"
-                style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title="Spotify playlist embed"
-              ></iframe>
-            </div>
+  <div id="spotify-consent-box" class="spotify-placeholder" role="button" tabindex="0" aria-label="Load Spotify playlist">
+    <div class="spotify-placeholder-top">
+      <div class="spotify-cover">
+        <img
+          src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
+          alt="Playlist cover artwork"
+        />
+      </div>
+
+      <div class="spotify-meta">
+        <span class="spotify-label">Spotify</span>
+        <h4>Warm Acoustic Lofi</h4>
+        <p>Playlist · denada.</p>
+      </div>
+    </div>
+
+    <div class="spotify-placeholder-body">
+      <div class="spotify-line spotify-line-1"></div>
+      <div class="spotify-line spotify-line-2"></div>
+      <div class="spotify-line spotify-line-3"></div>
+      <div class="spotify-line spotify-line-4"></div>
+    </div>
+
+    <div class="spotify-placeholder-bottom">
+      <button class="spotify-load-btn" type="button" id="loadSpotifyButton">
+        Load Spotify player
+      </button>
+    </div>
+  </div>
+</div>
           </article>
 
           <article class="music-item">
