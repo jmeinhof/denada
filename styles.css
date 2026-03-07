@@ -847,3 +847,110 @@ footer {
     justify-content: center;
   }
 }
+
+
+.spotify-placeholder {
+  width: 100%;
+  height: 352px;
+  border-radius: 12px;
+  background: linear-gradient(180deg,#1f1f1f,#121212);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spotify-top {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.spotify-cover {
+  width: 92px;
+  height: 92px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.spotify-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spotify-info h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.spotify-info p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.spotify-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+}
+
+.spotify-tracks {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+}
+
+.spotify-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+}
+
+.spotify-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.spotify-consent {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.spotify-load-btn {
+  border: none;
+  background: #1db954;
+  color: white;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  width: fit-content;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.spotify-load-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+@media (max-width:560px){
+
+  .spotify-top {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .spotify-cover {
+    width: 70px;
+    height: 70px;
+  }
+
+  .spotify-load-btn {
+    width: 100%;
+  }
+
+}
