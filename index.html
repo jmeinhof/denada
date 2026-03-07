@@ -5,6 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>denada. | Acoustic Lofi Folkhop</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .gallery-more-indicator {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 1rem;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.04) 45%, transparent 70%);
+    }
+
+    .gallery-more-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #2f2a25;
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(6px);
+    }
+
+    .gallery-thumb-wrap {
+      position: relative;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -93,8 +124,8 @@
 
                   <div class="spotify-meta">
                     <span class="spotify-label">Spotify</span>
-                    <h4>denada. essentials</h4>
-                    <p>Playlist • denada.rocks </p>
+                    <h4>This is denada.</h4>
+                    <p>Playlist • denada.</p>
                   </div>
                 </div>
 
@@ -106,18 +137,17 @@
                 </div>
 
                 <div class="spotify-placeholder-bottom spotify-consent-card">
-  <div class="spotify-consent-copy">
-    <p class="spotify-consent-title">Enable Spotify player</p>
-    <p class="spotify-consent-text">
-      Clicking on 'Open player' loads content from Spotify and may transmit personal data.
-    </p>
-  </div>
+                  <div class="spotify-consent-copy">
+                    <p class="spotify-consent-title">Enable Spotify embed</p>
+                    <p class="spotify-consent-text">
+                      This loads content from Spotify and may transmit personal data.
+                    </p>
+                  </div>
 
-  <button class="spotify-load-btn" id="loadSpotifyButton" type="button">
-    Open player
-  </button>
-</div>
-</div>
+                  <button class="spotify-load-btn" id="loadSpotifyButton" type="button">
+                    Open player
+                  </button>
+                </div>
               </div>
             </div>
           </article>
@@ -200,71 +230,7 @@
           open it in full size. You can navigate with the arrows, keyboard, or swipe on mobile.
         </p>
 
-        <div class="gallery-grid">
-          <article class="gallery-card card">
-            <button class="gallery-trigger" type="button" data-index="0" aria-label="Open gallery image 1">
-              <div class="gallery-thumb-wrap">
-                <img
-                  class="gallery-thumb"
-                  src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
-                  alt="Studio desk with instruments"
-                />
-              </div>
-              <div class="gallery-meta">
-                <h3>Studio corner</h3>
-                <p>A compact setup built for warmth, detail, and quiet sessions.</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="gallery-card card">
-            <button class="gallery-trigger" type="button" data-index="1" aria-label="Open gallery image 2">
-              <div class="gallery-thumb-wrap">
-                <img
-                  class="gallery-thumb"
-                  src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80"
-                  alt="Acoustic guitar close-up"
-                />
-              </div>
-              <div class="gallery-meta">
-                <h3>Acoustic textures</h3>
-                <p>Wood, strings, and small imperfections that shape the sound.</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="gallery-card card">
-            <button class="gallery-trigger" type="button" data-index="2" aria-label="Open gallery image 3">
-              <div class="gallery-thumb-wrap">
-                <img
-                  class="gallery-thumb"
-                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80"
-                  alt="Notebook and headphones near a window"
-                />
-              </div>
-              <div class="gallery-meta">
-                <h3>Sketches and ideas</h3>
-                <p>Loose notes, melodies, and moments before a track takes shape.</p>
-              </div>
-            </button>
-          </article>
-
-          <article class="gallery-card card">
-            <button class="gallery-trigger" type="button" data-index="3" aria-label="Open gallery image 4">
-              <div class="gallery-thumb-wrap">
-                <img
-                  class="gallery-thumb"
-                  src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Musician playing acoustic guitar"
-                />
-              </div>
-              <div class="gallery-meta">
-                <h3>Live warmth</h3>
-                <p>Natural performance energy and a relaxed, organic feel.</p>
-              </div>
-            </button>
-          </article>
-        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
       </div>
     </section>
 
@@ -509,13 +475,61 @@
           "That balance between calm and movement is where the music feels most honest.",
           "Even simple arrangements become more memorable when they keep that human pulse."
         ]
+      },
+      {
+        title: "Quiet morning light",
+        thumb: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1800&q=90",
+        alt: "Headphones and notebook in warm light",
+        caption: "Soft daylight and slow starts that shape the mood of the music.",
+        description: [
+          "Some of the calmest ideas arrive early in the day.",
+          "There is a certain clarity in quiet morning sessions that often leads to the warmest arrangements.",
+          "A lot of the project’s atmosphere comes from trying to preserve that feeling.",
+          "The music should feel unforced, natural, and open."
+        ]
+      },
+      {
+        title: "Keys and space",
+        thumb: "https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1800&q=90",
+        alt: "Piano in warm sunlight",
+        caption: "Simple harmonies and room to breathe.",
+        description: [
+          "Piano often gives the tracks their emotional balance.",
+          "It can stay in the background as texture or become the main melodic voice.",
+          "I like leaving a lot of space around each phrase.",
+          "That space is part of what keeps the music calm and replayable."
+        ]
+      },
+      {
+        title: "Field notes",
+        thumb: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1800&q=90",
+        alt: "Notebook and music ideas",
+        caption: "Collected moods, phrases, and half-finished thoughts.",
+        description: [
+          "Not every idea becomes a song.",
+          "But collecting fragments helps create a larger creative world around the project.",
+          "This archive of moods often becomes just as important as the final track list."
+        ]
+      },
+      {
+        title: "Strings and grain",
+        thumb: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1800&q=90",
+        alt: "Close-up guitar detail",
+        caption: "Texture, resonance, and human detail.",
+        description: [
+          "The smallest sounds often carry the most emotion.",
+          "That is why I like keeping acoustic detail in the final mix.",
+          "A slight scrape or resonance can make a loop feel alive."
+        ]
       }
     ];
 
-    galleryItems.forEach((item) => {
-      const preloadImage = new Image();
-      preloadImage.src = item.image;
-    });
+    const visibleGalleryCount = 6;
+    const galleryGrid = document.getElementById("galleryGrid");
 
     const modal = document.getElementById("galleryModal");
     const modalImage = document.getElementById("galleryModalImage");
@@ -525,19 +539,64 @@
     const modalCounter = document.getElementById("galleryCounter");
     const modalClose = document.getElementById("galleryClose");
     const modalOverlayClose = document.getElementById("galleryOverlayClose");
+
     const prevButtons = [
       document.getElementById("galleryPrev"),
       document.getElementById("galleryPrevMobile")
     ];
+
     const nextButtons = [
       document.getElementById("galleryNext"),
       document.getElementById("galleryNextMobile")
     ];
-    const triggers = document.querySelectorAll(".gallery-trigger");
 
     let currentIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderGalleryGrid() {
+      const visibleItems = galleryItems.slice(0, visibleGalleryCount);
+      const hiddenCount = Math.max(galleryItems.length - visibleGalleryCount, 0);
+
+      galleryGrid.innerHTML = visibleItems.map((item, index) => {
+        const showMoreBadge = index === visibleGalleryCount - 1 && hiddenCount > 0;
+
+        return `
+          <article class="gallery-card card">
+            <button class="gallery-trigger" type="button" data-index="${index}" aria-label="Open gallery image ${index + 1}">
+              <div class="gallery-thumb-wrap">
+                <img
+                  class="gallery-thumb"
+                  src="${escapeHtml(item.thumb)}"
+                  alt="${escapeHtml(item.alt)}"
+                />
+                ${showMoreBadge ? `
+                  <div class="gallery-more-indicator" aria-hidden="true">
+                    <span class="gallery-more-badge">+ ${hiddenCount} more</span>
+                  </div>
+                ` : ""}
+              </div>
+              <div class="gallery-meta">
+                <h3>${escapeHtml(item.title)}</h3>
+                <p>${escapeHtml(item.caption)}</p>
+              </div>
+            </button>
+          </article>
+        `;
+      }).join("");
+
+      document.querySelectorAll(".gallery-trigger").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          openGallery(Number(trigger.dataset.index));
+        });
+      });
+    }
 
     function renderGalleryItem(index) {
       const item = galleryItems[index];
@@ -549,7 +608,7 @@
       modalTitle.textContent = item.title;
       modalCaption.textContent = item.caption;
       modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
-      modalDescription.innerHTML = item.description.map(text => `<p>${text}</p>`).join("");
+      modalDescription.innerHTML = item.description.map(text => `<p>${escapeHtml(text)}</p>`).join("");
     }
 
     function openGallery(index) {
@@ -575,20 +634,25 @@
       renderGalleryItem(prevIndex);
     }
 
+    galleryItems.forEach((item) => {
+      const preloadImage = new Image();
+      preloadImage.src = item.image;
+    });
+
     modalImage.addEventListener("load", () => {
       modal.classList.remove("is-loading");
     });
 
-    triggers.forEach((trigger) => {
-      trigger.addEventListener("click", () => {
-        openGallery(Number(trigger.dataset.index));
-      });
+    prevButtons.forEach((btn) => {
+      if (btn) btn.addEventListener("click", showPrev);
     });
 
-    prevButtons.forEach((btn) => btn && btn.addEventListener("click", showPrev));
-    nextButtons.forEach((btn) => btn && btn.addEventListener("click", showNext));
-    modalClose.addEventListener("click", closeGallery);
-    modalOverlayClose.addEventListener("click", closeGallery);
+    nextButtons.forEach((btn) => {
+      if (btn) btn.addEventListener("click", showNext);
+    });
+
+    if (modalClose) modalClose.addEventListener("click", closeGallery);
+    if (modalOverlayClose) modalOverlayClose.addEventListener("click", closeGallery);
 
     document.addEventListener("keydown", (event) => {
       if (!modal.classList.contains("active")) return;
@@ -614,6 +678,8 @@
         showPrev();
       }
     }, { passive: true });
+
+    renderGalleryGrid();
 
     const spotifyButton = document.getElementById("loadSpotifyButton");
     const spotifyBox = document.getElementById("spotify-consent-box");
