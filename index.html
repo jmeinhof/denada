@@ -565,6 +565,31 @@ if (spotifyButton && spotifyBox) {
     }
   });
 }
+
+    const spotifyButton = document.getElementById("loadSpotifyButton");
+const spotifyBox = document.getElementById("spotify-consent-box");
+
+if (spotifyButton && spotifyBox) {
+
+  spotifyButton.addEventListener("click", () => {
+
+    spotifyBox.outerHTML = `
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="Spotify playlist embed">
+      </iframe>
+    `;
+
+  });
+
+}
     
   </script>
 </body>
