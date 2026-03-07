@@ -1,238 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>denada. | Acoustic Lofi Folkhop</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>denada. | Acoustic Lofi Folkhop</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
-<header class="site-header">
-<div class="container nav">
-
-<a href="#home" class="brand">denada.</a>
-
-<nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#music">Music</a>
-<a href="#gallery">Gallery</a>
-<a href="#playlists">Playlists</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-</header>
-
-
-<main>
-
-<section id="home" class="hero">
-<div class="container hero-grid">
-
-<div>
-<span class="eyebrow">Warm acoustic lofi folkhop</span>
-<h1>Organic beats, soft textures, and sunlit calm.</h1>
-
-<p class="lead">
-I make warm acoustic instrumental music with guitars, piano,
-bass and gentle grooves designed for focus, calm moments
-and quiet listening.
-</p>
-
-<div class="button-row">
-<a class="btn btn-primary" href="#music">Listen</a>
-<a class="btn" href="#gallery">Gallery</a>
-<a class="btn" href="#contact">Contact</a>
-</div>
-
-</div>
-
-<div class="hero-card">
-<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80">
-</div>
-
-</div>
-</section>
-
-
-<section id="music">
-<div class="container">
-
-<h2 class="section-title">Music</h2>
-
-<div class="music-grid">
-
-<article class="music-item">
-
-<div class="music-copy">
-
-<h3>Organic sound</h3>
-
-<p>
-Real instruments and warm analog textures form the core of
-the sound.
-</p>
-
-<div class="platform-group">
-
-<a class="platform-link" href="https://open.spotify.com">Spotify</a>
-<a class="platform-link" href="https://music.apple.com">Apple Music</a>
-<a class="platform-link" href="https://music.youtube.com">YouTube Music</a>
-
-</div>
-
-</div>
-
-<div class="media-panel">
-
-<div class="spotify-placeholder" id="spotify-consent-box">
-
-<div class="spotify-top">
-
-<div class="spotify-cover">
-<img src="media/This_is_denada_Cover_small.jpg">
-</div>
-
-<div>
-<span class="spotify-label">Spotify</span>
-<h4>This is denada.</h4>
-<p>Playlist · denada.</p>
-</div>
-
-</div>
-
-<div class="spotify-tracks">
-<div class="spotify-track"></div>
-<div class="spotify-track"></div>
-<div class="spotify-track"></div>
-</div>
-
-<p class="spotify-consent">
-Clicking “Load Spotify player” will connect to Spotify
-and may transmit personal data such as your IP address.
-</p>
-
-<button class="spotify-load-btn" id="loadSpotifyButton">
-Load Spotify player
-</button>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-</div>
-</section>
-
-
-<section id="gallery">
-<div class="container">
-
-<h2 class="section-title">Gallery</h2>
-
-<div class="gallery-grid">
-
-<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80">
-<img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80">
-
-</div>
-
-</div>
-</section>
-
-
-<section id="playlists">
-<div class="container">
-
-<h2 class="section-title">Playlists</h2>
-
-<div class="playlist-cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80">
-<h3>Organic Sound</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80">
-<h3>Calm Grooves</h3>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80">
-<h3>Bright & Cozy</h3>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<section id="contact">
-<div class="container">
-
-<h2 class="section-title">Contact</h2>
-
-<form action="mailto:hello@yourdomain.com" method="post" enctype="text/plain">
-
-<input type="text" name="name" placeholder="Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<textarea name="message" placeholder="Message"></textarea>
-
-<button class="btn btn-primary">Send</button>
-
-</form>
-
-</div>
-</section>
-
-</main>
-
-
-<footer>
-<div class="container footer-grid">
-
-<div>© XXX 2026</div>
-
-<a href="impressum.html">Impressum</a>
-<a href="privacy.html">Privacy</a>
-
-</div>
-</footer>
-
-
-<script>
-
-const spotifyButton = document.getElementById("loadSpotifyButton");
-const spotifyBox = document.getElementById("spotify-consent-box");
-
-if(spotifyButton){
-
-spotifyButton.onclick = () => {
-
-spotifyBox.outerHTML = `
-<iframe
-style="border-radius:12px"
-src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e"
-width="100%"
-height="352"
-frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy">
-</iframe>
-`;
-
-};
-
-}
-
-</script>
-
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand">denada.</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#music">Music</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#playlists">Playlists</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Warm acoustic lofi folkhop</span>
+          <h1>Organic beats, soft textures, and sunlit calm.</h1>
+
+          <p class="lead">
+            I make warm acoustic instrumental music with guitars, piano, bass,
+            and gentle grooves designed for focus, calm moments, and quiet listening.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="#music">Listen</a>
+            <a class="btn" href="#gallery">Gallery</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1200&q=80"
+            alt="Acoustic guitar and studio setup"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <div class="container">
+        <h2 class="section-title">Music</h2>
+        <p class="section-text">
+          Warm acoustic textures, mellow rhythms, and a handmade, intimate sound.
+        </p>
+
+        <div class="music-grid">
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Organic sound</h3>
+              <p>
+                Real instruments and warm analog textures form the core of the sound.
+              </p>
+
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+              </div>
+            </div>
+
+            <div class="media-panel">
+              <div class="spotify-placeholder" id="spotify-consent-box" role="button" tabindex="0" aria-label="Load Spotify player">
+                <div class="spotify-top">
+                  <div class="spotify-cover">
+                    <img src="media/This_is_denada_Cover_small.jpg" alt="This is denada playlist cover" />
+                  </div>
+
+                  <div class="spotify-info">
+                    <span class="spotify-label">Spotify</span>
+                    <h4>This is denada.</h4>
+                    <p>Playlist · denada.</p>
+                  </div>
+                </div>
+
+                <div class="spotify-tracks" aria-hidden="true">
+                  <div class="spotify-track track-w-1"></div>
+                  <div class="spotify-track track-w-2"></div>
+                  <div class="spotify-track track-w-3"></div>
+                  <div class="spotify-track track-w-4"></div>
+                </div>
+
+                <div class="spotify-bottom">
+                  <p class="spotify-consent">
+                    Clicking “Load Spotify player” will connect to Spotify and may transmit personal data such as your IP address.
+                  </p>
+
+                  <button class="spotify-load-btn" id="loadSpotifyButton" type="button">
+                    Load Spotify player
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Calm grooves</h3>
+              <p>
+                Relaxed rhythms and soft movement that stay light and unobtrusive.
+              </p>
+
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+              </div>
+            </div>
+
+            <div class="media-panel">
+              <img
+                src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80"
+                alt="Piano in warm sunlight"
+              />
+            </div>
+          </article>
+
+          <article class="music-item">
+            <div class="music-copy">
+              <h3>Bright and cozy</h3>
+              <p>
+                Gentle melodies and acoustic warmth for a soft, uplifting atmosphere.
+              </p>
+
+              <div class="platform-group">
+                <a class="platform-link" href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">Spotify</a>
+                <a class="platform-link" href="https://music.apple.com" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                <a class="platform-link" href="https://music.youtube.com" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+              </div>
+            </div>
+
+            <div class="media-panel">
+              <img
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
+                alt="Cozy studio headphones and notebook"
+              />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-text">
+          Small moments, instruments, textures, and places behind the music.
+        </p>
+
+        <div class="gallery-grid">
+          <button class="gallery-card" type="button" data-index="0" aria-label="Open gallery image 1">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80"
+              alt="Studio corner"
+            />
+          </button>
+
+          <button class="gallery-card" type="button" data-index="1" aria-label="Open gallery image 2">
+            <img
+              src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80"
+              alt="Acoustic textures"
+            />
+          </button>
+
+          <button class="gallery-card" type="button" data-index="2" aria-label="Open gallery image 3">
+            <img
+              src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1200&q=80"
+              alt="Sketches and ideas"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="playlists">
+      <div class="container">
+        <h2 class="section-title">Playlists</h2>
+        <p class="section-text">
+          Curated selections built around warmth, calm, and organic instrumental sound.
+        </p>
+
+        <div class="playlist-cards">
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
+                alt="Organic Sound"
+              />
+            </div>
+            <h3>Organic Sound</h3>
+          </article>
+
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1501612780327-45045538702b?auto=format&fit=crop&w=1200&q=80"
+                alt="Calm Grooves"
+              />
+            </div>
+            <h3>Calm Grooves</h3>
+          </article>
+
+          <article class="card playlist-card">
+            <div class="playlist-media">
+              <img
+                src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1200&q=80"
+                alt="Bright and Cozy"
+              />
+            </div>
+            <h3>Bright &amp; Cozy</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <form action="mailto:hello@yourdomain.com" method="post" enctype="text/plain" class="contact-form">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© XXX 2026</div>
+      <a href="impressum.html">Impressum</a>
+      <a href="privacy.html">Privacy</a>
+      <div>All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close gallery">×</button>
+
+      <button class="lightbox-arrow lightbox-prev" type="button" id="lightboxPrev" aria-label="Previous image">←</button>
+
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="" />
+      </div>
+
+      <button class="lightbox-arrow lightbox-next" type="button" id="lightboxNext" aria-label="Next image">→</button>
+    </div>
+  </div>
+
+  <script>
+    const spotifyButton = document.getElementById("loadSpotifyButton");
+    const spotifyBox = document.getElementById("spotify-consent-box");
+
+    function loadSpotify() {
+      if (!spotifyBox) return;
+
+      spotifyBox.outerHTML = `
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="Spotify playlist embed">
+        </iframe>
+      `;
+    }
+
+    if (spotifyButton && spotifyBox) {
+      spotifyButton.addEventListener("click", loadSpotify);
+
+      spotifyBox.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          loadSpotify();
+        }
+      });
+    }
+
+    const galleryItems = [
+      {
+        src: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80",
+        alt: "Studio corner"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1600&q=80",
+        alt: "Acoustic textures"
+      },
+      {
+        src: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?auto=format&fit=crop&w=1600&q=80",
+        alt: "Sketches and ideas"
+      }
+    ];
+
+    const galleryTriggers = document.querySelectorAll(".gallery-card");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+
+    let currentGalleryIndex = 0;
+
+    function renderLightbox(index) {
+      currentGalleryIndex = index;
+      lightboxImage.src = galleryItems[index].src;
+      lightboxImage.alt = galleryItems[index].alt;
+    }
+
+    function openLightbox(index) {
+      renderLightbox(index);
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function showPrevImage() {
+      const prev = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+      renderLightbox(prev);
+    }
+
+    function showNextImage() {
+      const next = (currentGalleryIndex + 1) % galleryItems.length;
+      renderLightbox(next);
+    }
+
+    galleryTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        openLightbox(Number(trigger.dataset.index));
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", showPrevImage);
+    lightboxNext.addEventListener("click", showNextImage);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("is-open")) return;
+
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") showPrevImage();
+      if (event.key === "ArrowRight") showNextImage();
+    });
+  </script>
 </body>
 </html>
