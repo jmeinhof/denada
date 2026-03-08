@@ -232,7 +232,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  align-items: stretch;
+  align-items: start;
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
@@ -244,7 +244,8 @@ h1 {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .music-copy h3 {
@@ -261,8 +262,8 @@ h1 {
   min-height: 320px;
   background: transparent;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 1.5rem 1.5rem 1.5rem 0.5rem;
 }
 
@@ -949,3 +950,19 @@ footer {
     justify-content: center;
   }
 }
+
+.lead,
+.section-text,
+.card p,
+.music-copy p,
+.gallery-meta p,
+.contact-note,
+.gallery-modal-text p,
+.legal-wrap p,
+.legal-wrap li,
+.spotify-meta p,
+.spotify-consent-text {
+  text-align: justify;
+}
+
+
