@@ -192,7 +192,8 @@ h1 {
 }
 
 .hero-card img {
-  height: 520px;
+  width: 100%;
+  height: auto;
   border-radius: 16px;
 }
 
