@@ -188,13 +188,12 @@ h1 {
 
 .hero-card {
   padding: 1rem;
-  border-radius: calc(var(--radius) + 6px);
 }
 
 .hero-card img {
   width: 100%;
   height: auto;
-  border-radius: 16px;
+  border-radius: calc(var(--radius) - 4px);
 }
 
 .section-title {
