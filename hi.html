@@ -223,12 +223,17 @@
     }
 
     .toggle-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex: 0 0 auto;
+      width: 1.5em;
+      height: 1.5em;
       color: var(--accent-dark);
-      font-size: 1.25rem;
+      font-size: 1.55rem;
       line-height: 1;
       font-weight: 700;
-      transition: transform 120ms ease;
+      transition: transform 160ms ease;
     }
 
     details[open] .toggle-icon {
@@ -296,7 +301,7 @@
       }
 
       .toggle-icon {
-        font-size: 1.35rem;
+        font-size: 1.65rem;
       }
     }
   </style>
@@ -313,13 +318,12 @@
       <section class="section" aria-labelledby="music-title">
         <h2 class="section-title" id="music-title">My Music</h2>
         <div class="links">
-
           <a class="link" href="https://www.denada.rocks/" target="_blank" rel="noopener noreferrer">
             <span class="link-main">
               <span class="link-label">Website | denada.</span>
             </span>
           </a>
-          
+
           <a class="link" href="https://open.spotify.com/artist/4ZKbNyILNSRRiiLBm8eUz3?si=KdamcO8JQkami3hMb6oAsQ" target="_blank" rel="noopener noreferrer">
             <span class="link-main">
               <span class="link-label">Spotify</span>
@@ -332,8 +336,6 @@
             </span>
           </a>
 
-          
-
           <details>
             <summary class="toggle-summary">
               <span>More streaming platforms</span>
@@ -344,13 +346,13 @@
                 <a class="sub-link" href="https://deezer.page.link/upo1anz1cdYuNjSo9" target="_blank" rel="noopener noreferrer">
                   <span>Deezer</span>
                 </a>
-                
+
                 <a class="sub-link" href="https://www.youtube.com/@denada." target="_blank" rel="noopener noreferrer">
-                  <span>Youtube Music</span>
+                  <span>YouTube Music</span>
                 </a>
 
                 <a class="sub-link" href="https://soundcloud.com/denada-music/" target="_blank" rel="noopener noreferrer">
-                  <span>Soundcloud</span>
+                  <span>SoundCloud</span>
                 </a>
 
                 <a class="sub-link" href="https://www.amazon.de/music/player/artists/B095RS9D66/denada" target="_blank" rel="noopener noreferrer">
@@ -360,7 +362,6 @@
                 <a class="sub-link" href="https://tidal.com/artist/25282285" target="_blank" rel="noopener noreferrer">
                   <span>Tidal</span>
                 </a>
-                
               </div>
             </div>
           </details>
@@ -370,7 +371,6 @@
       <section class="section" aria-labelledby="playlists-title">
         <h2 class="section-title" id="playlists-title">My Playlists</h2>
         <div class="links">
-          
           <a class="link" href="https://open.spotify.com/playlist/2yM0Mk5U7EAF8bMwvcjMEy?si=2d8cecace7e74e8d" target="_blank" rel="noopener noreferrer">
             <span class="link-main">
               <span class="link-label">Happy Focusing! | Spotify</span>
@@ -394,7 +394,7 @@
 
           <details>
             <summary class="toggle-summary">
-              <span>Links to Apple Music, Deezer, Youtube Music</span>
+              <span>Links to Apple Music, Deezer, YouTube Music</span>
               <span class="toggle-icon">⌄</span>
             </summary>
             <div class="toggle-content">
@@ -405,13 +405,9 @@
                 <a class="sub-link" href="https://music.apple.com/de/playlist/happy-focusing/pl.u-bVeTKAAYzo?l=en" target="_blank" rel="noopener noreferrer">
                   <span>Happy Focusing! | Apple Music</span>
                 </a>
-                
+
                 <a class="sub-link" href="https://music.apple.com/de/playlist/lofi-weekend-acoustic-vibes/pl.u-YmGqFgAAebl?l=en-GB" target="_blank" rel="noopener noreferrer">
                   <span>Lofi Weekend • Acoustic Vibes | Apple Music</span>
-                </a>
-
-                <a class="sub-link" href="https://music.apple.com/de/playlist/gentle-vibes/pl.u-YyRCgAAebl?l=en" target="_blank" rel="noopener noreferrer">
-                  <span>Gentle Vibes | Apple Music</span>
                 </a>
 
                 <a class="sub-link" href="https://music.apple.com/de/playlist/gentle-vibes/pl.u-YyRCgAAebl?l=en" target="_blank" rel="noopener noreferrer">
@@ -421,7 +417,6 @@
                 <a class="sub-link" href="https://denada.rocks/index.html#playlists" target="_blank" rel="noopener noreferrer">
                   <span>All other links</span>
                 </a>
-                
               </div>
             </div>
           </details>
@@ -445,8 +440,8 @@
             </summary>
             <div class="toggle-content">
               <p class="toggle-text">
-                Please use SubmitHub (free or paid) to submit your song. Please don't use Instagram or email to send me your songs. </br> </br> 
-                Please note that there is no way to buy your song onto my playlist. In general, I strongly recommend to <b>never pay for guaranteed listings</b>! </br>
+                Please use SubmitHub (free or paid) to submit your song. Please don't use Instagram or email to send me your songs.<br><br>
+                Please note that there is no way to buy your song onto my playlist. In general, I strongly recommend to <b>never pay for guaranteed listings</b>!<br>
                 I don't accept AI songs.
               </p>
               <div class="sub-links">
@@ -460,7 +455,11 @@
       </section>
     </div>
 
-    <div class="footer"><a href="https://www.denada.rocks/" target="_blank" rel="noopener noreferrer">denada.rocks 2026</a> | <a href="https://www.instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a> | <a href="https://www.denada.rocks/impressum" target="_blank" rel="noopener noreferrer">Impressum</a></div>
+    <div class="footer">
+      <a href="https://www.denada.rocks/" target="_blank" rel="noopener noreferrer">denada.rocks 2026</a> |
+      <a href="https://www.instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a> |
+      <a href="https://www.denada.rocks/impressum" target="_blank" rel="noopener noreferrer">Impressum</a>
+    </div>
   </main>
 </body>
 </html>
