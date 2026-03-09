@@ -408,15 +408,13 @@ I am happy to get in touch with you! Feel free to reach out via
   const item = galleryItems[index];
   currentIndex = index;
 
-  const fullDescription = getFullDescription(item);
-
   modal.classList.add("is-loading");
   modalImage.src = item.image;
   modalImage.alt = item.alt;
   modalTitle.textContent = item.title || "";
-  modalCaption.textContent = "";   // caption removed in modal
+  modalCaption.textContent = "";
   modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
-  modalDescription.innerHTML = `<p>${escapeHtml(fullDescription)}</p>`;
+  modalDescription.innerHTML = `<p>${escapeHtml(item.description || "")}</p>`;
 }
 
     function openGallery(index) {
