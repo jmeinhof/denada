@@ -9,7 +9,7 @@ const galleryItems = [
   {
     title: "Spotlights Cover",
     thumb: "gallery/Spotlights_cover.jpg",
-    image: "gallery/Jade_cover.jpg",
+    image: "gallery/Spotlights_cover.jpg",
     alt: "Spotlights Cover",
     description: "Spotlights (Dec 2025): This is what happens if you have a song in the upload process but forgot to come up with a cover. I quickly went onto my balcony, moved my phone around, and randomly took pictures. So it was a quick and dirty process, but I was quite happy with the result."
   },
