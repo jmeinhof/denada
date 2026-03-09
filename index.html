@@ -405,19 +405,19 @@ I am happy to get in touch with you! Feel free to reach out via
     }
 
     function renderGalleryItem(index) {
-      const item = galleryItems[index];
-      currentIndex = index;
+  const item = galleryItems[index];
+  currentIndex = index;
 
-      const previewCaption = getPreviewText(item.description, 100);
+  const fullDescription = getFullDescription(item);
 
-      modal.classList.add("is-loading");
-      modalImage.src = item.image;
-      modalImage.alt = item.alt;
-      modalTitle.textContent = item.title || "";
-      modalCaption.textContent = previewCaption;
-      modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
-      modalDescription.innerHTML = `<p>${escapeHtml(item.description || "")}</p>`;
-    }
+  modal.classList.add("is-loading");
+  modalImage.src = item.image;
+  modalImage.alt = item.alt;
+  modalTitle.textContent = item.title || "";
+  modalCaption.textContent = "";   // caption removed in modal
+  modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+  modalDescription.innerHTML = `<p>${escapeHtml(fullDescription)}</p>`;
+}
 
     function openGallery(index) {
       renderGalleryItem(index);
