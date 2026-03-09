@@ -1,34 +1,34 @@
 const galleryItems = [
   {
-    title: "Winter and Spring Cover",
+    title: "Winter and Spring",
     thumb: "gallery/Winterandspring_cover.jpg",
     image: "gallery/Winterandspring_cover.jpg",
     alt: "Winter and Spring Cover",
     description: "Winter and Spring (Feb 2026) was my first collab with Resonant Circuits. He created the visuals and came up with this beautiful cover art."
   },
   {
-    title: "Spotlights Cover",
+    title: "Spotlights",
     thumb: "gallery/Spotlights_cover.jpg",
     image: "gallery/Spotlights_cover.jpg",
     alt: "Spotlights Cover",
     description: "Spotlights (Dec 2025): This is what happens if you have a song in the upload process but forgot to come up with a cover. I quickly went onto my balcony, moved my phone around, and randomly took pictures. So it was a quick and dirty process, but I was quite happy with the result."
   },
   {
-    title: "Jade Cover",
+    title: "Jade",
     thumb: "gallery/Jade_logo.jpeg",
     image: "gallery/Jade_logo.jpeg",
     alt: "Jade Cover",
     description: "Cover picture of my song Jade (January 2025). This has been the first release of my dreamier alter ego second thoughts."
   },
   {
-    title: "Old Studio",
+    title: "Former Homestudio",
     thumb: "gallery/Old_studio.jpeg",
     image: "gallery/Old_studio.jpeg",
     alt: "My old home studio in Düsseldorf, Germany",
     description: "My former home studio desk in the beginning of 2023. I lived in Düsseldorf, Germany, back then."
   },
   {
-    title: "Indigo Cover",
+    title: "Indigo",
     thumb: "gallery/Indigo_logo.jpeg",
     image: "gallery/Indigo_logo.jpeg",
     alt: "Indigo Cover",
@@ -42,7 +42,7 @@ const galleryItems = [
     description: "Originally, this had been the cover art for my Colors EP. It soon became my artist logo as well. I actually drew this picture myself on my iPad."
   },
   {
-    title: "Breathe Cover",
+    title: "Breathe",
     thumb: "gallery/Breathe_logo.jpg",
     image: "gallery/Breathe_logo.jpg",
     alt: "Breathe Cover",
