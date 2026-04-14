@@ -114,12 +114,12 @@
               <div class="spotify-placeholder" id="spotify-consent-box" tabindex="0" aria-label="Spotify player consent box">
                 <div class="spotify-placeholder-top">
                   <div class="spotify-cover">
-                    <img src="media/This_is_denada_Cover_small.jpg" alt="This is denada playlist cover">
+                    <img src="media/This_is_denada_Cover_small.jpg" alt="denada. essentials playlist cover">
                   </div>
 
                   <div class="spotify-meta">
                     <span class="spotify-label">Spotify</span>
-                    <h4>This is denada.</h4>
+                    <h4>denada. essentials</h4>
                     <p>Playlist • denada.</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@
                   <div class="spotify-consent-copy">
                     <p class="spotify-consent-title">Enable Spotify player</p>
                     <p class="spotify-consent-text">
-                      This loads content from Spotify and may transmit personal data.
+                      Please note that enabling the Spotify player will share data with third-party providers.
                     </p>
                   </div>
 
@@ -275,7 +275,15 @@ I am happy to get in touch with you! Feel free to reach out via
      </br> </br>
       
     </p>
-    <iframe src="https://www.submithub.com/widget.html?color=FFFFFF&background=beae90&size=24px&text=Submit via SubmitHub&blog=denada-rocks&stats=true" frameborder="0" scrolling="no" width="100%" height="150px"></iframe>
+    <div class="submit-consent card" id="submitHubConsentBox" tabindex="0" aria-label="SubmitHub widget consent box">
+      <p class="submit-consent-title">Enable SubmitHub widget</p>
+      <p class="contact-note submit-consent-text">
+        This loads content from SubmitHub and may transmit personal data.
+      </p>
+      <button class="btn btn-primary submit-consent-button" id="loadSubmitHubButton" type="button">
+        Open SubmitHub widget
+      </button>
+    </div>
   </div>
 </div>
       </div>
@@ -489,6 +497,8 @@ I am happy to get in touch with you! Feel free to reach out via
 
     const spotifyButton = document.getElementById("loadSpotifyButton");
     const spotifyBox = document.getElementById("spotify-consent-box");
+    const submitHubButton = document.getElementById("loadSubmitHubButton");
+    const submitHubBox = document.getElementById("submitHubConsentBox");
 
     if (spotifyButton && spotifyBox) {
       const loadSpotify = () => {
@@ -514,6 +524,31 @@ I am happy to get in touch with you! Feel free to reach out via
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           loadSpotify();
+        }
+      });
+    }
+
+    if (submitHubButton && submitHubBox) {
+      const loadSubmitHub = () => {
+        submitHubBox.outerHTML = `
+          <iframe
+            src="https://www.submithub.com/widget.html?color=FFFFFF&background=beae90&size=24px&text=Submit via SubmitHub&blog=denada-rocks&stats=true"
+            frameborder="0"
+            scrolling="no"
+            width="100%"
+            height="150"
+            loading="lazy"
+            title="SubmitHub widget"
+          ></iframe>
+        `;
+      };
+
+      submitHubButton.addEventListener("click", loadSubmitHub);
+
+      submitHubBox.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          loadSubmitHub();
         }
       });
     }
