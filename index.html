@@ -4,38 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>denada. | Acoustic Lofi Folkhop</title>
+  <meta name="description" content="Organic, acoustic-oriented lofi and folk-hop by denada., an instrumental artist and producer from Bonn, Germany." />
+  <meta name="theme-color" content="#f6f1e8" />
+  <link rel="canonical" href="https://denada.rocks/" />
+  <link rel="icon" href="media/favicon.png" type="image/png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="denada." />
+  <meta property="og:title" content="denada. | Acoustic Lofi Folkhop" />
+  <meta property="og:description" content="Organic, acoustic-oriented lofi and folk-hop by denada., an instrumental artist and producer from Bonn, Germany." />
+  <meta property="og:url" content="https://denada.rocks/" />
+  <meta property="og:image" content="https://denada.rocks/media/og-denada.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="A collage of denada. studio and nature photography" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="denada. | Acoustic Lofi Folkhop" />
+  <meta name="twitter:description" content="Organic, acoustic-oriented lofi and folk-hop by denada." />
+  <meta name="twitter:image" content="https://denada.rocks/media/og-denada.jpg" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .gallery-more-indicator {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 1rem;
-      pointer-events: none;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.04) 45%, transparent 70%);
-    }
-
-    .gallery-more-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 38px;
-      padding: 0.55rem 0.9rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      color: #2f2a25;
-      font-size: 0.9rem;
-      font-weight: 700;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-      backdrop-filter: blur(6px);
-    }
-
-    .gallery-thumb-wrap {
-      position: relative;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -56,18 +42,23 @@
         <div>
           <span class="eyebrow">Organic, acoustic-oriented lofi</span>
           <h1>denada.</h1>
-          <p class="lead">
-            denada is an instrumental artist and producer from Bonn, Germany, 
-            creating uplifting and positive songs shaped by organic and acoustic instrumentation. 
-            Making music since the age of five — starting with piano and later adding trumpet, 
-            electric bass, and guitar — he built an early connection to live instruments 
-            and original melodies. </br> </br> His music blends acoustic elements with lofi aesthetics to form 
-            an intimate and uplifting sound. He leans toward organic lofi, chillhop, and folk-hop, 
-            using warm guitars, expressive piano lines, smooth bass parts, and subtle background textures, 
-            often built from transformed guitar, piano, and field recordings. 
-            With this approach, denada aims to offer listeners an atmosphere that feels positive, 
-            calm, and easy to return to. 
-          </p>
+          <div class="lead">
+            <p>
+              denada is an instrumental artist and producer from Bonn, Germany,
+              creating uplifting and positive songs shaped by organic and acoustic instrumentation.
+              Making music since the age of five — starting with piano and later adding trumpet,
+              electric bass, and guitar — he built an early connection to live instruments
+              and original melodies.
+            </p>
+            <p>
+              His music blends acoustic elements with lofi aesthetics to form
+              an intimate and uplifting sound. He leans toward organic lofi, chillhop, and folk-hop,
+              using warm guitars, expressive piano lines, smooth bass parts, and subtle background textures,
+              often built from transformed guitar, piano, and field recordings.
+              With this approach, denada aims to offer listeners an atmosphere that feels positive,
+              calm, and easy to return to.
+            </p>
+          </div>
 
           <div class="button-row">
             <a class="btn btn-primary" href="#music">Listen now</a>
@@ -78,8 +69,14 @@
 
         <div class="hero-card">
           <img
-            src="media/Slide1_lumi2.png"
-            alt="studio setups and some cover images in a framework."
+            src="media/Slide1_lumi2.webp"
+            srcset="media/Slide1_lumi2-640.webp 640w, media/Slide1_lumi2.webp 1200w"
+            sizes="(max-width: 920px) calc(100vw - 2rem), 560px"
+            width="1200"
+            height="791"
+            fetchpriority="high"
+            decoding="async"
+            alt="A collage of denada. studio setups, nature photography, and cover artwork"
           />
         </div>
       </div>
@@ -111,10 +108,10 @@
             </div>
 
             <div class="media-panel spotify-panel">
-              <div class="spotify-placeholder" id="spotify-consent-box" tabindex="0" aria-label="Spotify player consent box">
+              <div class="spotify-placeholder" id="spotify-consent-box" aria-live="polite">
                 <div class="spotify-placeholder-top">
                   <div class="spotify-cover">
-                    <img src="media/This_is_denada_Cover_small.jpg" alt="denada. essentials playlist cover">
+                    <img src="media/This_is_denada_Cover_small.webp" srcset="media/This_is_denada_Cover_small-256.webp 256w, media/This_is_denada_Cover_small.webp 512w" sizes="96px" width="512" height="512" loading="lazy" decoding="async" alt="denada. essentials playlist cover">
                   </div>
 
                   <div class="spotify-meta">
@@ -135,13 +132,22 @@
                   <div class="spotify-consent-copy">
                     <p class="spotify-consent-title">Enable Spotify player</p>
                     <p class="spotify-consent-text">
-                      Please note that enabling the Spotify player will share data with third-party providers.
+                      Only after you consent will content from Spotify AB be loaded. Your IP address,
+                      browser and device information, and information about this page visit will be
+                      transmitted to Spotify. Spotify may use cookies or similar technologies and
+                      process data outside the EEA.
+                      <a href="impressum.html#spotify-embed">Privacy details</a>
                     </p>
                   </div>
 
-                  <button class="spotify-load-btn" id="loadSpotifyButton" type="button">
-                    Open player
-                  </button>
+                  <div class="consent-actions">
+                    <button class="spotify-load-btn" type="button" data-embed-action="accept">
+                      Consent and load Spotify
+                    </button>
+                    <button class="consent-decline-btn consent-decline-btn-dark" type="button" data-embed-action="decline">
+                      Decline
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,7 +171,13 @@
           <article class="card playlist-card">
             <div class="playlist-media">
               <img
-                src="media/Happy_focusing_small.jpg"
+                src="media/Happy_focusing_small.webp"
+                srcset="media/Happy_focusing_small-400.webp 400w, media/Happy_focusing_small.webp 800w"
+                sizes="(max-width: 920px) calc(100vw - 4.8rem), (max-width: 1100px) calc(50vw - 3rem), 350px"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
                 alt="Happy focusing playlist cover"
               />
             </div>
@@ -189,7 +201,13 @@
           <article class="card playlist-card">
             <div class="playlist-media">
               <img
-                src="media/Lofi_weekend_small.jpeg"
+                src="media/Lofi_weekend_small.webp"
+                srcset="media/Lofi_weekend_small-400.webp 400w, media/Lofi_weekend_small.webp 800w"
+                sizes="(max-width: 920px) calc(100vw - 4.8rem), (max-width: 1100px) calc(50vw - 3rem), 350px"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
                 alt="Lofi Weekend • acoustic vibes playlist cover"
               />
             </div>
@@ -211,7 +229,13 @@
           <article class="card playlist-card">
             <div class="playlist-media">
               <img
-                src="media/Gentle_vibes_small.jpeg"
+                src="media/Gentle_vibes_small.webp"
+                srcset="media/Gentle_vibes_small-400.webp 400w, media/Gentle_vibes_small.webp 800w"
+                sizes="(max-width: 920px) calc(100vw - 4.8rem), (max-width: 1100px) calc(50vw - 3rem), 350px"
+                width="800"
+                height="800"
+                loading="lazy"
+                decoding="async"
                 alt="Gentle Vibes playlist cover"
               />
             </div>
@@ -253,36 +277,27 @@
   <div class="card">
     <h3>Let’s connect</h3>
     <p>
-I am happy to get in touch with you! Feel free to reach out via 
-<a href="https://instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a> or email! </br>
-</p>
+      I am happy to get in touch with you! Feel free to reach out via
+      <a href="https://instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a> or email.
+    </p>
 
     <div class="button-row">
-            <a class="btn btn-primary" href="mailto:denada.4music@gmail.com?subject=Message%20from%20denada.rocks">Send email</a>
-            <a class="btn" href="https://www.instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a>
-          </div>
-    </br><i>denada.4music (at) gmail.com</i>
+      <a class="btn btn-primary" href="mailto:denada.4music@gmail.com?subject=Message%20from%20denada.rocks">Send email</a>
+      <a class="btn" href="https://www.instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+    <p class="email-display"><i>denada.4music (at) gmail.com</i></p>
   </div>
 
   <div class="card">
     <h3>Playlist submissions</h3>
     <p class="contact-note">
-      If you are a music producer who wants to submit songs for my playlists playlist, please <i>(1)</i> have a careful listen to my playlist and evaluate whether your song would fit in and <i>(2)</i> preferably use SubmitHub (paid or free submission) to submit your song.
+      If you are a music producer who wants to submit songs for my playlists, please <i>(1)</i> have a careful listen to my playlists and evaluate whether your song would fit in and <i>(2)</i> preferably use SubmitHub (paid or free submission) to submit your song.
       Please note that there is no way to buy your song onto my playlist! In general, I strongly recommend to <b>never pay for guaranteed listings</b>! Please also don't use Instagram or email to send me your songs.
-      </br> </br>
-    If you decide to buy credits at SubmitHub, you may use my referral link and <a href="https://www.submithub.com/coupon/happyfocusing" target="_blank" rel="noopener noreferrer">get a <b>10 percent discount on SubmitHub credits</b>: <br>
-    <i>https://www.submithub.com/coupon/happyfocusing</i></a>
-     </br> </br>
-      
     </p>
-    <div class="submit-consent card" id="submitHubConsentBox" tabindex="0" aria-label="SubmitHub widget consent box">
-      <p class="submit-consent-title">Enable SubmitHub widget</p>
-      <p class="contact-note submit-consent-text">
-        This loads content from SubmitHub and may transmit personal data.
-      </p>
-      <button class="btn btn-primary submit-consent-button" id="loadSubmitHubButton" type="button">
-        Open SubmitHub widget
-      </button>
+    <div class="button-row">
+      <a class="btn btn-primary" href="https://www.submithub.com/playlister/denada-rocks" target="_blank" rel="noopener noreferrer">
+        Submit via SubmitHub
+      </a>
     </div>
   </div>
 </div>
@@ -294,14 +309,12 @@ I am happy to get in touch with you! Feel free to reach out via
     <div class="container footer-grid">
       <div class="footer-copy">© denada.rocks 2026 - All rights reserved.</div>
       <a class="footer-link" href="https://instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a class="footer-link" href="impressum.html">Impressum</a>
-      <a class="footer-link" href="impressum.html">Privacy</a>
+      <a class="footer-link" href="impressum.html#impressum">Impressum</a>
+      <a class="footer-link" href="impressum.html#privacy">Privacy</a>
     </div>
   </footer>
 
-  <div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="gallery-overlay-close" type="button" id="galleryOverlayClose" aria-label="Close gallery"></button>
-
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle" aria-describedby="galleryModalDescription">
     <div class="gallery-modal-panel">
       <div class="gallery-modal-topbar">
         <div class="gallery-counter" id="galleryCounter">1 / 4</div>
@@ -313,7 +326,7 @@ I am happy to get in touch with you! Feel free to reach out via
 
         <div class="gallery-modal-center">
           <div class="gallery-modal-image-wrap">
-            <img class="gallery-modal-image" id="galleryModalImage" src="" alt="" />
+            <img class="gallery-modal-image" id="galleryModalImage" alt="" decoding="async" />
           </div>
 
           <div class="gallery-modal-text">
@@ -345,7 +358,6 @@ I am happy to get in touch with you! Feel free to reach out via
     const modalDescription = document.getElementById("galleryModalDescription");
     const modalCounter = document.getElementById("galleryCounter");
     const modalClose = document.getElementById("galleryClose");
-    const modalOverlayClose = document.getElementById("galleryOverlayClose");
 
     const prevButtons = [
       document.getElementById("galleryPrev"),
@@ -360,6 +372,13 @@ I am happy to get in touch with you! Feel free to reach out via
     let currentIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
+    let lastFocusedElement = null;
+
+    const inertPageRegions = [
+      document.querySelector("body > header"),
+      document.querySelector("body > main"),
+      document.querySelector("body > footer")
+    ].filter(Boolean);
 
     function escapeHtml(text) {
       const div = document.createElement("div");
@@ -388,7 +407,13 @@ I am happy to get in touch with you! Feel free to reach out via
                 <img
                   class="gallery-thumb"
                   src="${escapeHtml(item.thumb)}"
+                  srcset="${escapeHtml(item.thumbSmall)} 320w, ${escapeHtml(item.thumb)} 640w"
+                  sizes="(max-width: 560px) calc(100vw - 2rem), (max-width: 1100px) calc(50vw - 2.5rem), 265px"
                   alt="${escapeHtml(item.alt)}"
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
                 />
                 ${showMoreBadge ? `
                   <div class="gallery-more-indicator" aria-hidden="true">
@@ -413,45 +438,66 @@ I am happy to get in touch with you! Feel free to reach out via
     }
 
     function renderGalleryItem(index) {
-  const item = galleryItems[index];
-  currentIndex = index;
+      const item = galleryItems[index];
+      currentIndex = index;
 
-  modal.classList.add("is-loading");
-  modalImage.src = item.image;
-  modalImage.alt = item.alt;
-  modalTitle.textContent = item.title || "";
-  modalCaption.textContent = "";
-  modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
-  modalDescription.innerHTML = `<p>${escapeHtml(item.description || "")}</p>`;
-}
+      modal.classList.add("is-loading");
+      modalImage.src = item.image;
+      modalImage.alt = item.alt;
+      modalTitle.textContent = item.title || "";
+      modalCaption.textContent = "";
+      modalCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+      modalDescription.innerHTML = `<p>${escapeHtml(item.description || "")}</p>`;
+    }
 
     function openGallery(index) {
+      lastFocusedElement = document.activeElement;
       renderGalleryItem(index);
       modal.classList.add("active");
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
+      inertPageRegions.forEach((region) => {
+        region.inert = true;
+      });
+      modalClose.focus();
+      preloadAdjacentImages(index);
     }
 
     function closeGallery() {
       modal.classList.remove("active");
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
+      inertPageRegions.forEach((region) => {
+        region.inert = false;
+      });
+      if (lastFocusedElement instanceof HTMLElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    function preloadAdjacentImages(index) {
+      const adjacentIndexes = [
+        (index - 1 + galleryItems.length) % galleryItems.length,
+        (index + 1) % galleryItems.length
+      ];
+
+      adjacentIndexes.forEach((adjacentIndex) => {
+        const preloadImage = new Image();
+        preloadImage.src = galleryItems[adjacentIndex].image;
+      });
     }
 
     function showNext() {
       const nextIndex = (currentIndex + 1) % galleryItems.length;
       renderGalleryItem(nextIndex);
+      preloadAdjacentImages(nextIndex);
     }
 
     function showPrev() {
       const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
       renderGalleryItem(prevIndex);
+      preloadAdjacentImages(prevIndex);
     }
-
-    galleryItems.forEach((item) => {
-      const preloadImage = new Image();
-      preloadImage.src = item.image;
-    });
 
     modalImage.addEventListener("load", () => {
       modal.classList.remove("is-loading");
@@ -466,7 +512,9 @@ I am happy to get in touch with you! Feel free to reach out via
     });
 
     if (modalClose) modalClose.addEventListener("click", closeGallery);
-    if (modalOverlayClose) modalOverlayClose.addEventListener("click", closeGallery);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeGallery();
+    });
 
     document.addEventListener("keydown", (event) => {
       if (!modal.classList.contains("active")) return;
@@ -474,6 +522,25 @@ I am happy to get in touch with you! Feel free to reach out via
       if (event.key === "Escape") closeGallery();
       if (event.key === "ArrowRight") showNext();
       if (event.key === "ArrowLeft") showPrev();
+
+      if (event.key === "Tab") {
+        const focusableElements = Array.from(
+          modal.querySelectorAll('button:not([disabled]), [href], [tabindex]:not([tabindex="-1"])')
+        ).filter((element) => element.offsetParent !== null);
+
+        if (!focusableElements.length) return;
+
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstFocusable) {
+          event.preventDefault();
+          lastFocusable.focus();
+        } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+          event.preventDefault();
+          firstFocusable.focus();
+        }
+      }
     });
 
     modal.addEventListener("touchstart", (event) => {
@@ -495,63 +562,76 @@ I am happy to get in touch with you! Feel free to reach out via
 
     renderGalleryGrid();
 
-    const spotifyButton = document.getElementById("loadSpotifyButton");
     const spotifyBox = document.getElementById("spotify-consent-box");
-    const submitHubButton = document.getElementById("loadSubmitHubButton");
-    const submitHubBox = document.getElementById("submitHubConsentBox");
 
-    if (spotifyButton && spotifyBox) {
-      const loadSpotify = () => {
-        spotifyBox.outerHTML = `
+    function setupEmbedConsent(box, serviceName, embedMarkup) {
+      if (!box) return;
+
+      const initialMarkup = box.innerHTML;
+
+      function restoreConsentChoice() {
+        box.innerHTML = initialMarkup;
+        box.querySelector('[data-embed-action="accept"]')?.focus();
+      }
+
+      function showDeclinedState() {
+        box.innerHTML = `
+          <div class="consent-declined">
+            <p><strong>${serviceName} content is not loaded.</strong></p>
+            <p>No connection to ${serviceName} was made by this embedded content.</p>
+            <button class="btn consent-decline-btn" type="button" data-embed-action="change">
+              Change choice
+            </button>
+          </div>
+        `;
+        box.querySelector('[data-embed-action="change"]')?.focus();
+      }
+
+      function loadEmbed() {
+        box.innerHTML = `
+          <div class="embedded-service">
+            ${embedMarkup}
+            <div class="embed-disable-bar">
+              <p>${serviceName} content is enabled for this page view.</p>
+              <button class="btn consent-decline-btn" type="button" data-embed-action="disable">
+                Disable ${serviceName}
+              </button>
+            </div>
+          </div>
+        `;
+        box.querySelector('[data-embed-action="disable"]')?.focus();
+      }
+
+      box.addEventListener("click", (event) => {
+        const actionButton = event.target.closest("[data-embed-action]");
+        if (!actionButton || !box.contains(actionButton)) return;
+
+        const action = actionButton.dataset.embedAction;
+        if (action === "accept") loadEmbed();
+        if (action === "decline") showDeclinedState();
+        if (action === "change" || action === "disable") restoreConsentChoice();
+      });
+    }
+
+    setupEmbedConsent(
+      spotifyBox,
+      "Spotify",
+      `
           <iframe
+            class="embed-frame"
             data-testid="embed-iframe"
-            style="border-radius:12px"
             src="https://open.spotify.com/embed/playlist/4W76ie5EBD368ze86ior5e?utm_source=generator&theme=0"
             width="100%"
             height="352"
             frameborder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
             loading="lazy"
             title="Spotify playlist embed"
           ></iframe>
-        `;
-      };
-
-      spotifyButton.addEventListener("click", loadSpotify);
-
-      spotifyBox.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          loadSpotify();
-        }
-      });
-    }
-
-    if (submitHubButton && submitHubBox) {
-      const loadSubmitHub = () => {
-        submitHubBox.outerHTML = `
-          <iframe
-            src="https://www.submithub.com/widget.html?color=FFFFFF&background=beae90&size=24px&text=Submit via SubmitHub&blog=denada-rocks&stats=true"
-            frameborder="0"
-            scrolling="no"
-            width="100%"
-            height="150"
-            loading="lazy"
-            title="SubmitHub widget"
-          ></iframe>
-        `;
-      };
-
-      submitHubButton.addEventListener("click", loadSubmitHub);
-
-      submitHubBox.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          loadSubmitHub();
-        }
-      });
-    }
+      `
+    );
   </script>
 </body>
 </html>

@@ -141,6 +141,10 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+.lead p + p {
+  margin-top: 1rem;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -183,6 +187,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
+  min-width: 0;
 }
 
 /* Hero card frame (disabled for now)
@@ -357,9 +362,36 @@ details.platform-dropdown summary::-webkit-details-marker {
 }
 
 .gallery-thumb-wrap {
+  position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--bg-soft);
+}
+
+.gallery-more-indicator {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.04) 45%, transparent 70%);
+}
+
+.gallery-more-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #2f2a25;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
 }
 
 .gallery-thumb {
@@ -419,8 +451,19 @@ details.platform-dropdown summary::-webkit-details-marker {
 }
 
 .contact-grid {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
+}
+
+.contact-grid > *,
+.music-item > *,
+.playlist-card > * {
+  min-width: 0;
+}
+
+.contact-grid a,
+.legal-wrap a {
+  overflow-wrap: anywhere;
 }
 
 form {
@@ -463,27 +506,53 @@ textarea:focus {
   margin-top: 0.4rem;
 }
 
-.submit-consent {
+.email-display {
   margin-top: 1rem;
-  padding: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+  overflow-wrap: anywhere;
 }
 
-.submit-consent-title,
-.submit-consent-text {
+.consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.consent-decline-btn {
+  cursor: pointer;
+}
+
+.consent-declined {
+  display: grid;
+  gap: 0.65rem;
+  align-content: center;
+  min-height: 126px;
+}
+
+.consent-declined p,
+.embed-disable-bar p {
   margin: 0;
 }
 
-.submit-consent-title {
-  font-size: 1rem;
-  font-weight: 700;
+.embedded-service {
+  width: 100%;
 }
 
-.submit-consent-button {
-  align-self: flex-start;
-  cursor: pointer;
+.embed-frame {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: 0;
+  border-radius: 12px;
+}
+
+.embed-disable-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 footer {
@@ -520,13 +589,6 @@ footer {
 
 .gallery-modal.active {
   display: flex;
-}
-
-.gallery-overlay-close {
-  position: absolute;
-  inset: 0;
-  border: none;
-  background: transparent;
 }
 
 .gallery-modal-panel {
@@ -592,6 +654,22 @@ footer {
   transform: translateY(-1px);
 }
 
+.gallery-trigger:focus-visible,
+.gallery-arrow:focus-visible,
+.gallery-close:focus-visible,
+.btn:focus-visible,
+.platform-link:focus-visible,
+.nav-links a:focus-visible,
+.brand:focus-visible,
+.footer-link:focus-visible {
+  outline: 3px solid rgba(111, 83, 56, 0.55);
+  outline-offset: 3px;
+}
+
+.gallery-trigger:focus-visible {
+  outline-offset: -3px;
+}
+
 .gallery-modal-center {
   min-width: 0;
 }
@@ -645,12 +723,21 @@ footer {
   padding: 5rem 0;
 }
 
+.legal-sections {
+  display: grid;
+  gap: 2rem;
+}
+
 .legal-wrap {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
   padding: 2rem;
+}
+
+.privacy-section {
+  border-top: 5px solid var(--accent);
 }
 
 .legal-wrap h1 {
@@ -678,10 +765,17 @@ footer {
   text-decoration: underline;
 }
 
-.legal-divider {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 2rem 0;
+.privacy-callout {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(139, 107, 75, 0.32);
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  background: var(--bg-soft);
+}
+
+.privacy-callout h2 {
+  margin-top: 0;
 }
 
 .spotify-placeholder {
@@ -811,6 +905,12 @@ footer {
   max-width: 42ch;
 }
 
+.spotify-consent-text a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
 .spotify-load-btn {
   border: none;
   background: #1db954;
@@ -822,6 +922,25 @@ footer {
   transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
   box-shadow: 0 10px 24px rgba(29, 185, 84, 0.22);
+}
+
+.consent-decline-btn-dark {
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+}
+
+.spotify-placeholder .consent-declined,
+.spotify-placeholder .embed-disable-bar {
+  color: #fff;
+}
+
+.spotify-placeholder .consent-declined p,
+.spotify-placeholder .embed-disable-bar p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .spotify-load-btn:hover,
@@ -850,7 +969,7 @@ footer {
   .contact-grid,
   .footer-grid,
   .music-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .playlist-cards {
@@ -942,7 +1061,7 @@ footer {
     min-width: unset;
   }
 
-  .submit-consent-button {
+  .consent-actions .consent-decline-btn {
     width: 100%;
     align-self: stretch;
   }
@@ -979,7 +1098,8 @@ footer {
     max-width: none;
   }
 
-  .spotify-load-btn {
+  .spotify-load-btn,
+  .spotify-placeholder .consent-decline-btn {
     width: 100%;
     justify-content: center;
   }
@@ -998,4 +1118,3 @@ footer {
 .spotify-consent-text {
   text-align: justify;
 }
-
