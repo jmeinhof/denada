@@ -21,6 +21,78 @@
   <meta name="twitter:title" content="denada. | Acoustic Lofi Folkhop" />
   <meta name="twitter:description" content="Organic, acoustic-oriented lofi and folk-hop by denada." />
   <meta name="twitter:image" content="https://denada.rocks/media/og-denada.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://denada.rocks/#website",
+        "url": "https://denada.rocks/",
+        "name": "denada.",
+        "description": "Official website of denada., an instrumental artist and producer from Bonn, Germany.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://denada.rocks/#artist",
+        "name": "denada.",
+        "alternateName": "denada",
+        "url": "https://denada.rocks/",
+        "image": "https://denada.rocks/media/og-denada.jpg",
+        "description": "Instrumental organic lofi, chillhop, and folk-hop artist and producer from Bonn, Germany.",
+        "genre": ["Organic lofi", "Chillhop", "Folk-hop", "Instrumental hip-hop"],
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Bonn, Germany"
+        },
+        "sameAs": [
+          "https://open.spotify.com/artist/4ZKbNyILNSRRiiLBm8eUz3",
+          "https://music.apple.com/de/artist/denada/1569025652",
+          "https://deezer.page.link/upo1anz1cdYuNjSo9",
+          "https://www.youtube.com/@denada.",
+          "https://soundcloud.com/denada-music/",
+          "https://www.amazon.de/music/player/artists/B095RS9D66/denada",
+          "https://tidal.com/artist/25282285",
+          "https://www.instagram.com/denada.rocks"
+        ]
+      },
+      {
+        "@type": "MusicPlaylist",
+        "name": "Happy Focusing!",
+        "creator": { "@id": "https://denada.rocks/#artist" },
+        "url": "https://open.spotify.com/playlist/2yM0Mk5U7EAF8bMwvcjMEy",
+        "sameAs": [
+          "https://music.apple.com/de/playlist/happy-focusing/pl.u-bVeTKAAYzo?l=en",
+          "https://www.deezer.com/en/playlist/10051328882",
+          "https://youtube.com/playlist?list=PLlHydlLTRlw5qQjeNnCLNHZbu4MQZHQST"
+        ]
+      },
+      {
+        "@type": "MusicPlaylist",
+        "name": "Lofi Weekend • Acoustic Vibes",
+        "creator": { "@id": "https://denada.rocks/#artist" },
+        "url": "https://open.spotify.com/playlist/4GEXdMPntQ0e6gx1YuKI6T",
+        "sameAs": [
+          "https://music.apple.com/de/playlist/lofi-weekend-acoustic-vibes/pl.u-YmGqFgAAebl?l=en-GB",
+          "https://link.deezer.com/s/32E2Pddjz8Ix1oeFsZ01k",
+          "https://youtube.com/playlist?list=PLlHydlLTRlw7soH0zX1M4ZvdqpF55Gy3l"
+        ]
+      },
+      {
+        "@type": "MusicPlaylist",
+        "name": "Gentle Vibes",
+        "creator": { "@id": "https://denada.rocks/#artist" },
+        "url": "https://open.spotify.com/playlist/7lrk5fiS1vPyIXCjpr7PGA",
+        "sameAs": [
+          "https://music.apple.com/de/playlist/gentle-vibes/pl.u-YyRCgAAebl?l=en",
+          "https://link.deezer.com/s/32E2RJ3W52Sti718xQGvK",
+          "https://youtube.com/playlist?list=PLlHydlLTRlw6T_ykApKo-QPXjW4Xmjb88"
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -30,6 +102,7 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#music">Music</a>
         <a href="#playlists">Playlists</a>
+        <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -44,26 +117,16 @@
           <h1>denada.</h1>
           <div class="lead">
             <p>
-              denada is an instrumental artist and producer from Bonn, Germany,
-              creating uplifting and positive songs shaped by organic and acoustic instrumentation.
-              Making music since the age of five — starting with piano and later adding trumpet,
-              electric bass, and guitar — he built an early connection to live instruments
-              and original melodies.
-            </p>
-            <p>
-              His music blends acoustic elements with lofi aesthetics to form
-              an intimate and uplifting sound. He leans toward organic lofi, chillhop, and folk-hop,
-              using warm guitars, expressive piano lines, smooth bass parts, and subtle background textures,
-              often built from transformed guitar, piano, and field recordings.
-              With this approach, denada aims to offer listeners an atmosphere that feels positive,
-              calm, and easy to return to.
+              denada. is an instrumental artist and producer from Bonn, Germany, creating
+              uplifting music from acoustic instruments and organic textures. His warm blend
+              of lofi, chillhop, and folk-hop is made for focus, calm, and everyday listening.
             </p>
           </div>
 
           <div class="button-row">
             <a class="btn btn-primary" href="#music">Listen now</a>
             <a class="btn" href="#playlists">View playlists</a>
-            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn" href="#about">About denada.</a>
           </div>
         </div>
 
@@ -131,13 +194,16 @@
                 <div class="spotify-placeholder-bottom spotify-consent-card">
                   <div class="spotify-consent-copy">
                     <p class="spotify-consent-title">Enable Spotify player</p>
-                    <p class="spotify-consent-text">
-                      Only after you consent will content from Spotify AB be loaded. Your IP address,
-                      browser and device information, and information about this page visit will be
-                      transmitted to Spotify. Spotify may use cookies or similar technologies and
-                      process data outside the EEA.
-                      <a href="impressum.html#spotify-embed">Privacy details</a>
-                    </p>
+                    <p class="spotify-consent-text">Spotify loads only after you consent.</p>
+                    <details class="spotify-privacy-details">
+                      <summary>Privacy details</summary>
+                      <p>
+                        Your IP address, browser and device information, and information about
+                        this page visit will be transmitted to Spotify AB. Spotify may use cookies
+                        or similar technologies and process data outside the EEA.
+                        <a href="impressum.html#spotify-embed">Full privacy information</a>
+                      </p>
+                    </details>
                   </div>
 
                   <div class="consent-actions">
@@ -145,7 +211,7 @@
                       Consent and load Spotify
                     </button>
                     <button class="consent-decline-btn consent-decline-btn-dark" type="button" data-embed-action="decline">
-                      Decline
+                      Decline Spotify
                     </button>
                   </div>
                 </div>
@@ -161,10 +227,9 @@
       <div class="container">
         <h2 class="section-title">Playlists</h2>
         <p class="section-text">
-          Alongside my own releases, I curate several playlists. My oldest playlist, <i>Happy Focusing!</i>, was launched in 2021, and I have created additional playlists since then. 
-          Below are my three most prominent playlists, which together have more than 8,000 followers and over 1,000 monthly listeners on Spotify alone (as of March 2026). 
-          All my playlists are available on Spotify, Apple Music, Deezer, and YouTube Music.
-          My playlist statistics are tracked by <a href="https://www.submithub.com/to/denada-rocks" target="_blank" rel="noopener noreferrer">SubmitHub, where you can find the most recent data for each playlist</a>.
+          Alongside his own releases, denada. curates three flagship playlists for focus,
+          calm, and slow weekends. They are available on Spotify, Apple Music, Deezer,
+          and YouTube Music.
         </p>
 
         <div class="playlist-cards">
@@ -187,13 +252,16 @@
                 Uplifting, organic lo-fi, chill-hop, and folk-hop beats for deep work, studying, reading, 
                 or coding. 100 percent instrumental, 100 percent human-made. 
               </p>
-              <div class="platform-group">
-                <a class="platform-link" href="https://open.spotify.com/playlist/2yM0Mk5U7EAF8bMwvcjMEy?si=2d8cecace7e74e8d" target="_blank" rel="noopener noreferrer">Spotify</a>
-                <a class="platform-link" href="https://music.apple.com/de/playlist/happy-focusing/pl.u-bVeTKAAYzo?l=en" target="_blank" rel="noopener noreferrer">Apple Music</a>
-                <a class="platform-link" href="https://www.deezer.com/en/playlist/10051328882" target="_blank" rel="noopener noreferrer">Deezer</a>
-                <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw5qQjeNnCLNHZbu4MQZHQST&si=0d4nb7kEC8IExbbN" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-                
-                
+              <div class="platform-group playlist-platforms">
+                <a class="platform-link platform-link-primary" href="https://open.spotify.com/playlist/2yM0Mk5U7EAF8bMwvcjMEy?si=2d8cecace7e74e8d" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+                <details class="platform-dropdown playlist-more">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://music.apple.com/de/playlist/happy-focusing/pl.u-bVeTKAAYzo?l=en" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                    <a class="platform-link" href="https://www.deezer.com/en/playlist/10051328882" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw5qQjeNnCLNHZbu4MQZHQST&si=0d4nb7kEC8IExbbN" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                  </div>
+                </details>
               </div>
             </div>
           </article>
@@ -216,12 +284,16 @@
               <p>
                 A set of acoustic-sounding lo-fi vibes and laid-back folk-hop beats for a relaxed and chill weekend.
               </p>
-              <div class="platform-group">
-                <a class="platform-link" href="https://open.spotify.com/playlist/4GEXdMPntQ0e6gx1YuKI6T?si=d0d2d50a4aef4034" target="_blank" rel="noopener noreferrer">Spotify</a>
-                <a class="platform-link" href="https://music.apple.com/de/playlist/lofi-weekend-acoustic-vibes/pl.u-YmGqFgAAebl?l=en-GB" target="_blank" rel="noopener noreferrer">Apple Music</a>
-                <a class="platform-link" href="https://link.deezer.com/s/32E2Pddjz8Ix1oeFsZ01k" target="_blank" rel="noopener noreferrer">Deezer</a>
-                <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw7soH0zX1M4ZvdqpF55Gy3l&si=f4pdvKeQdKWHwKi9" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-                
+              <div class="platform-group playlist-platforms">
+                <a class="platform-link platform-link-primary" href="https://open.spotify.com/playlist/4GEXdMPntQ0e6gx1YuKI6T?si=d0d2d50a4aef4034" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+                <details class="platform-dropdown playlist-more">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://music.apple.com/de/playlist/lofi-weekend-acoustic-vibes/pl.u-YmGqFgAAebl?l=en-GB" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                    <a class="platform-link" href="https://link.deezer.com/s/32E2Pddjz8Ix1oeFsZ01k" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw7soH0zX1M4ZvdqpF55Gy3l&si=f4pdvKeQdKWHwKi9" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                  </div>
+                </details>
               </div>
             </div>
           </article>
@@ -242,17 +314,43 @@
             <div>
               <h3>Gentle Vibes</h3>
               <p>
-                Organic, acoustic-orientated lofi, soft and mellow chillhop to relax, sleep, chill. Instrumental lo-fi beats only.
+                Organic, acoustic-oriented lofi and soft, mellow chillhop for relaxing, sleeping, and unwinding. Instrumental lo-fi beats only.
               </p>
-              <div class="platform-group">
-                <a class="platform-link" href="https://open.spotify.com/playlist/7lrk5fiS1vPyIXCjpr7PGA?si=89cb6460ab594000" target="_blank" rel="noopener noreferrer">Spotify</a>
-                <a class="platform-link" href="https://music.apple.com/de/playlist/gentle-vibes/pl.u-YyRCgAAebl?l=en" target="_blank" rel="noopener noreferrer">Apple Music</a>
-                <a class="platform-link" href="https://link.deezer.com/s/32E2RJ3W52Sti718xQGvK" target="_blank" rel="noopener noreferrer">Deezer</a>   
-                <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw6T_ykApKo-QPXjW4Xmjb88&si=SX3fV0nFDueFiXyR" target="_blank" rel="noopener noreferrer">YouTube Music</a>
-                             
+              <div class="platform-group playlist-platforms">
+                <a class="platform-link platform-link-primary" href="https://open.spotify.com/playlist/7lrk5fiS1vPyIXCjpr7PGA?si=89cb6460ab594000" target="_blank" rel="noopener noreferrer">Listen on Spotify</a>
+                <details class="platform-dropdown playlist-more">
+                  <summary class="platform-link">Other platforms</summary>
+                  <div class="dropdown-menu">
+                    <a class="platform-link" href="https://music.apple.com/de/playlist/gentle-vibes/pl.u-YyRCgAAebl?l=en" target="_blank" rel="noopener noreferrer">Apple Music</a>
+                    <a class="platform-link" href="https://link.deezer.com/s/32E2RJ3W52Sti718xQGvK" target="_blank" rel="noopener noreferrer">Deezer</a>
+                    <a class="platform-link" href="https://youtube.com/playlist?list=PLlHydlLTRlw6T_ykApKo-QPXjW4Xmjb88&si=SX3fV0nFDueFiXyR" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+                  </div>
+                </details>
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2 class="section-title">Organic instruments, warm textures.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            denada. has been making music since the age of five, beginning with piano
+            before adding trumpet, electric bass, and guitar. That multi-instrumental
+            background shaped an enduring connection to live instruments and original melodies.
+          </p>
+          <p>
+            His music combines acoustic elements with lofi aesthetics: warm guitars,
+            expressive piano lines, smooth bass parts, and subtle textures built from
+            transformed instruments and field recordings. The result sits between organic
+            lofi, chillhop, and folk-hop—positive, intimate, and easy to return to.
+          </p>
         </div>
       </div>
     </section>
@@ -282,7 +380,7 @@
     </p>
 
     <div class="button-row">
-      <a class="btn btn-primary" href="mailto:denada.4music@gmail.com?subject=Message%20from%20denada.rocks">Send email</a>
+      <button class="btn btn-primary" id="emailButton" type="button" data-user="denada.4music" data-domain="gmail.com">Send email</button>
       <a class="btn" href="https://www.instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
     <p class="email-display"><i>denada.4music (at) gmail.com</i></p>
@@ -292,7 +390,7 @@
     <h3>Playlist submissions</h3>
     <p class="contact-note">
       If you are a music producer who wants to submit songs for my playlists, please <i>(1)</i> have a careful listen to my playlists and evaluate whether your song would fit in and <i>(2)</i> preferably use SubmitHub (paid or free submission) to submit your song.
-      Please note that there is no way to buy your song onto my playlist! In general, I strongly recommend to <b>never pay for guaranteed listings</b>! Please also don't use Instagram or email to send me your songs.
+      Please note that there is no way to buy your song onto my playlist! In general, I strongly recommend to <b>never pay for guaranteed listings</b>! I don't accept AI-generated songs. Please also don't use Instagram or email to send me your songs.
     </p>
     <div class="button-row">
       <a class="btn btn-primary" href="https://www.submithub.com/playlister/denada-rocks" target="_blank" rel="noopener noreferrer">
@@ -309,7 +407,8 @@
     <div class="container footer-grid">
       <div class="footer-copy">© denada.rocks 2026 - All rights reserved.</div>
       <a class="footer-link" href="https://instagram.com/denada.rocks" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a class="footer-link" href="impressum.html#impressum">Impressum</a>
+      <a class="footer-link" href="impressum-de.html#impressum">Impressum</a>
+      <a class="footer-link" href="impressum-de.html#privacy">Datenschutz</a>
       <a class="footer-link" href="impressum.html#privacy">Privacy</a>
     </div>
   </footer>
@@ -561,6 +660,14 @@
     }, { passive: true });
 
     renderGalleryGrid();
+
+    const emailButton = document.getElementById("emailButton");
+    if (emailButton) {
+      emailButton.addEventListener("click", () => {
+        const address = `${emailButton.dataset.user}@${emailButton.dataset.domain}`;
+        window.location.href = `mailto:${address}?subject=Message%20from%20denada.rocks`;
+      });
+    }
 
     const spotifyBox = document.getElementById("spotify-consent-box");
 

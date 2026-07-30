@@ -318,6 +318,13 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.platform-link-primary,
+.platform-link-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
 details.platform-dropdown {
   position: relative;
 }
@@ -444,6 +451,28 @@ details.platform-dropdown summary::-webkit-details-marker {
   width: 100%;
 }
 
+.playlist-platforms {
+  align-items: flex-start;
+}
+
+.playlist-more {
+  min-width: 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-copy {
+  display: grid;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 1.03rem;
+}
+
 .contact-grid,
 .footer-grid {
   display: grid;
@@ -562,7 +591,7 @@ footer {
 }
 
 .footer-grid {
-  grid-template-columns: 1fr auto auto auto;
+  grid-template-columns: 1fr repeat(4, auto);
   align-items: center;
 }
 
@@ -661,6 +690,8 @@ footer {
 .platform-link:focus-visible,
 .nav-links a:focus-visible,
 .brand:focus-visible,
+.language-switch a:focus-visible,
+.spotify-privacy-details summary:focus-visible,
 .footer-link:focus-visible {
   outline: 3px solid rgba(111, 83, 56, 0.55);
   outline-offset: 3px;
@@ -728,6 +759,28 @@ footer {
   gap: 2rem;
 }
 
+.language-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-switch a,
+.language-switch span {
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.language-switch span[aria-current="page"] {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
 .legal-wrap {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -776,6 +829,31 @@ footer {
 
 .privacy-callout h2 {
   margin-top: 0;
+}
+
+.spotify-privacy-details {
+  margin-top: 0.25rem;
+  max-width: 46ch;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.76rem;
+}
+
+.spotify-privacy-details summary {
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.spotify-privacy-details p {
+  margin-top: 0.45rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.spotify-privacy-details a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 .spotify-placeholder {
@@ -962,10 +1040,12 @@ footer {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 920px) {
   .hero-grid,
+  .about-grid,
   .contact-grid,
   .footer-grid,
   .music-item {
